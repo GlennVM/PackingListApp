@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PackingList.UserControls;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,23 @@ namespace PackingList
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
+        {
+            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+        }
+
+        private void Loadingtrips(object sender, RoutedEventArgs e)
+        {
+            MySplitView.IsPaneOpen = false;
+
+            UserControl trips = new UCTrips();
+        }
+
+        private void loadingitems(object sender, RoutedEventArgs e)
+        {
+            MySplitView.IsPaneOpen = false;
         }
     }
 }
