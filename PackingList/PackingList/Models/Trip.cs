@@ -10,7 +10,9 @@ namespace PackingList.Models
     {
         public string Title { get; set; }
 
-        IList<TripComponent> items = new List<TripComponent>();
+        public IList<TripComponent> items { get; set; }
+
+       // IList<TripComponent> items = new List<TripComponent>();
         
         public override void Add(TripComponent t)
         {

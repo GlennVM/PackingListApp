@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>b212b258-f120-44a7-b12e-6e302bd63270</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\Gebruiker\Source\Repos\PackingListApp2zit\PackingList\PackingList\obj\x86\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>912E9C1F8C09F52F3F4466C7B9C563A703C766065DE396FDA1577D949DADB2EF</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>1331DB9591C87081501DD8D891C412439D2D7BE7FD9B9240274E7E56BDEA0089</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>b212b258-f120-44a7-b12e-6e302bd63270_1.0.0.0_x86__v5hwkz5qh6gar</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>b212b258-f120-44a7-b12e-6e302bd63270_v5hwkz5qh6gar!App</RegisteredUserModeAppID>
     <RegisteredPackageID>b212b258-f120-44a7-b12e-6e302bd63270</RegisteredPackageID>
@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Users\Gebruiker\Source\Repos\PackingListApp2zit\PackingList\PackingList\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-08-22T07:47:00.171</Modified>
+      <Modified>2016-08-22T12:19:06.648</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -70,7 +70,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Gebruiker\Source\Repos\PackingListApp2zit\PackingList\PackingList\bin\x86\Debug\Core\entrypoint\PackingList.exe">
       <PackagePath>entrypoint\PackingList.exe</PackagePath>
-      <Modified>2016-08-22T07:46:59.735</Modified>
+      <Modified>2016-08-22T12:19:05.448</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Gebruiker\Source\Repos\PackingListApp2zit\PackingList\PackingList\bin\x86\Debug\Core\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -98,7 +98,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Gebruiker\Source\Repos\PackingListApp2zit\PackingList\PackingList\bin\x86\Debug\Core\PackingList.exe">
       <PackagePath>PackingList.exe</PackagePath>
-      <Modified>2016-08-22T07:47:00.169</Modified>
+      <Modified>2016-08-22T12:19:06.646</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Gebruiker\Source\Repos\PackingListApp2zit\PackingList\PackingList\bin\x86\Debug\Core\PackingList.xr.xml">
       <PackagePath>PackingList.xr.xml</PackagePath>
@@ -110,7 +110,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Gebruiker\Source\Repos\PackingListApp2zit\PackingList\PackingList\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-08-22T07:36:49.196</Modified>
+      <Modified>2016-08-22T12:19:06.143</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Gebruiker\Source\Repos\PackingListApp2zit\PackingList\PackingList\bin\x86\Debug\Core\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>

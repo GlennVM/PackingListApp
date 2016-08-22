@@ -10,12 +10,12 @@ namespace PackingList.ViewModels
 {
     public class MainViewModel
     {
-        public List<Trip> Trips { get; set; }
+        public List<TripComponent> TripComponent { get; set; }
         DummyService dm = new DummyService();
 
         public void laadReizen()
         {
-            Trips = dm.retrieveTrips();
+            TripComponent = dm.retrieveTrips();
         }
     }
 }

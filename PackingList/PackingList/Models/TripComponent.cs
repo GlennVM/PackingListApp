@@ -8,7 +8,7 @@ namespace PackingList.Models
 {
     public abstract class TripComponent
     {
-        public string Name { get; protected set; }
+        public string Name { get; set; }
 
         public virtual void Add(TripComponent t)
         {

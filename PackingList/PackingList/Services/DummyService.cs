@@ -9,21 +9,21 @@ namespace PackingList.Services
 {
     public class DummyService
     {
-        List<Trip> trips;
+        List<TripComponent> trips;
         public DummyService()
         {
-            List<Item> items = new List<Item>();
+            List<TripComponent> items = new List<TripComponent>();
             items.Add(new Item() {Name = "Item 1", Checked = true});
             items.Add(new Item() { Name = "Item 2", Checked = false });
             items.Add(new Item() { Name = "Item 3", Checked = true });
 
-            trips = new List<Trip>();
+            trips = new List<TripComponent>();
             trips.Add(new Trip() { Title = "Demenarken", items = items});
             trips.Add(new Trip() { Title = "Italië", items = items });
             trips.Add(new Trip() { Title = "Duitsland", items = items });
         }
 
-        public List<Trip> retrieveTrips()
+        public List<TripComponent> retrieveTrips()
         {
             return trips;
         }

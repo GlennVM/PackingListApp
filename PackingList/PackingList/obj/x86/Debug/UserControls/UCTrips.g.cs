@@ -235,11 +235,11 @@ namespace PackingList.UserControls
                 {
                     if ((phase & (NOT_PHASED | (1 << 0))) != 0)
                     {
-                        this.Update_vm_Trips(obj.Trips, phase);
+                        this.Update_vm_Trips(obj.TripComponent, phase);
                     }
                 }
             }
-            private void Update_vm_Trips(global::System.Collections.Generic.List<global::PackingList.Models.Trip> obj, int phase)
+            private void Update_vm_Trips(global::System.Collections.Generic.List<global::PackingList.Models.TripComponent> obj, int phase)
             {
                 if((phase & ((1 << 0) | NOT_PHASED )) != 0)
                 {
