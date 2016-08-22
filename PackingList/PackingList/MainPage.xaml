@@ -14,12 +14,13 @@
         </PivotItem>
         <PivotItem Header="Items" />
     </Pivot>-->
-    
-    <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="150">
+
+    <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="150"
+               Background="Black" PaneBackground="DarkSeaGreen">
         <SplitView.Pane>
-            <StackPanel Background="Gray">
+            <StackPanel>
                 <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
-                    Width="50" Height="50" Background="Transparent" Click="HamburgerButton_Click"/>
+                    Width="50" Height="50" Background="Transparent" Click="HamburgerButton_Click" />
                 <StackPanel Orientation="Horizontal">
                     <Button x:Name="MenuButton1" FontFamily="Segoe MDL2 Assets" Content=""
                     Width="50" Height="50" Background="Transparent" Click="Loadingtrips"/>
@@ -34,10 +35,13 @@
         </SplitView.Pane>
         <SplitView.Content>
             <Grid x:Name="MySplitViewContent">
+                <StackPanel Background="DarkSeaGreen" HorizontalAlignment="Left" Height="400" Margin="50,50,50,50" VerticalAlignment="Top" Width="400">
+
+                </StackPanel>
             </Grid>
         </SplitView.Content>
     </SplitView>
-    
+
     <Page.BottomAppBar>
         <CommandBar>
             <CommandBar.PrimaryCommands>

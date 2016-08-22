@@ -1,4 +1,5 @@
-﻿using PackingList.UserControls;
+﻿using PackingList.Models;
+using PackingList.UserControls;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -6,6 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -26,6 +28,7 @@ namespace PackingList
         public MainPage()
         {
             this.InitializeComponent();
+            ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(400, 650));
         }
 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
@@ -36,8 +39,6 @@ namespace PackingList
         private void Loadingtrips(object sender, RoutedEventArgs e)
         {
             MySplitView.IsPaneOpen = false;
-
-            UserControl trips = new UCTrips();
         }
 
         private void loadingitems(object sender, RoutedEventArgs e)
