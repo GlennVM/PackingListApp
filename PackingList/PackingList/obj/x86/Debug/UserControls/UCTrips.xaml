@@ -9,7 +9,7 @@
     d:DesignHeight="300"
     d:DesignWidth="400">
 
-    <ListView x:ConnectionId='2' xmlns:m="using:PackingList.Models"                                                                              >
+    <ListView x:ConnectionId='2' xmlns:m="using:PackingList.Models"                                                                                      >
         <ListView.ItemsPanel>
             <ItemsPanelTemplate>
                 <WrapGrid Orientation="Horizontal" ItemHeight="200" ItemWidth="400" />

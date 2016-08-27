@@ -112,6 +112,9 @@
     <Compile Include="TripDetails.xaml.cs">
       <DependentUpon>TripDetails.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UCItems.xaml.cs">
+      <DependentUpon>UCItems.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UCTrips.xaml.cs">
       <DependentUpon>UCTrips.xaml</DependentUpon>
     </Compile>
@@ -143,6 +146,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="TripDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UCItems.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

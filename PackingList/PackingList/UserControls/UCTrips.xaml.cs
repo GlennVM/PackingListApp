@@ -22,18 +22,24 @@ namespace PackingList.UserControls
     public sealed partial class UCTrips : UserControl
     {
         private MainViewModel vm = new MainViewModel();
-        public UCTrips()
+        private Panel mp;
+        public UCTrips(Panel sender)
         {
             this.InitializeComponent();
             vm.laadReizen();
+            this.mp = sender;
         }
 
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ListView lv = (ListView)sender;
             Trip geselecteerdeTrip = lv.SelectedItem as Trip;
-            var frame = Window.Current.Content as Frame;
-            frame.Navigate(typeof(TripDetails), geselecteerdeTrip);
+            var myControl = new PackingList.UserControls.UCItems(geselecteerdeTrip);
+            mp.Children.Clear();
+            mp.Children.Add(myControl);
+
+            //var frame = Window.Current.Content as Frame;
+            //frame.Navigate(typeof(TripDetails), geselecteerdeTrip);
         }
     }
 }

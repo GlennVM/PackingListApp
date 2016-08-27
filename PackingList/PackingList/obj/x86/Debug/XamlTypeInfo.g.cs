@@ -132,19 +132,21 @@ namespace PackingList.PackingList_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[5];
+            _typeNameTable = new string[6];
             _typeNameTable[0] = "PackingList.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[3] = "PackingList.TripDetails";
-            _typeNameTable[4] = "PackingList.UserControls.UCTrips";
+            _typeNameTable[4] = "PackingList.UserControls.UCItems";
+            _typeNameTable[5] = "PackingList.UserControls.UCTrips";
 
-            _typeTable = new global::System.Type[5];
+            _typeTable = new global::System.Type[6];
             _typeTable[0] = typeof(global::PackingList.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[3] = typeof(global::PackingList.TripDetails);
-            _typeTable[4] = typeof(global::PackingList.UserControls.UCTrips);
+            _typeTable[4] = typeof(global::PackingList.UserControls.UCItems);
+            _typeTable[5] = typeof(global::PackingList.UserControls.UCTrips);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -181,7 +183,6 @@ namespace PackingList.PackingList_XamlTypeInfo
 
         private object Activate_0_MainPage() { return new global::PackingList.MainPage(); }
         private object Activate_3_TripDetails() { return new global::PackingList.TripDetails(); }
-        private object Activate_4_UCTrips() { return new global::PackingList.UserControls.UCTrips(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -215,9 +216,14 @@ namespace PackingList.PackingList_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 4:   //  PackingList.UserControls.UCTrips
+            case 4:   //  PackingList.UserControls.UCItems
                 userType = new global::PackingList.PackingList_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_4_UCTrips;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  PackingList.UserControls.UCTrips
+                userType = new global::PackingList.PackingList_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
