@@ -12,7 +12,7 @@
     <ListView xmlns:m="using:PackingList.Models"  ItemsSource="{x:Bind vm.TripComponent}" SelectionChanged="ListView_SelectionChanged">
         <ListView.ItemsPanel>
             <ItemsPanelTemplate>
-                <WrapGrid Orientation="Horizontal" ItemHeight="200" ItemWidth="400" />
+                <WrapGrid Orientation="Horizontal" ItemHeight="100" ItemWidth="400" />
             </ItemsPanelTemplate>
         </ListView.ItemsPanel>
         <ListView.ItemTemplate>

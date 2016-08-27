@@ -1,5 +1,6 @@
 ﻿using PackingList.Models;
 using PackingList.UserControls;
+using PackingList.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -25,6 +27,7 @@ namespace PackingList
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        MainViewModel vm = new MainViewModel();
         public MainPage()
         {
             this.InitializeComponent();
@@ -39,7 +42,10 @@ namespace PackingList
         private void Loadingtrips(object sender, RoutedEventArgs e)
         {
             MySplitView.IsPaneOpen = false;
-            var myControl = new PackingList.UserControls.UCTrips(itemsPanel, addPanel);
+            tripsPanel.Children.Clear();
+            itemsPanel.Children.Clear();
+            addPanel.Children.Clear();
+            var myControl = new PackingList.UserControls.UCTrips(itemsPanel, addPanel, vm);
             tripsPanel.Children.Add(myControl);
         }
 
@@ -49,6 +55,8 @@ namespace PackingList
             tripsPanel.Children.Clear();
             itemsPanel.Children.Clear();
             addPanel.Children.Clear();
+            var myControl = new PackingList.UserControls.UCItemDictionary(itemsPanel, vm);
+            tripsPanel.Children.Add(myControl);
         }
     }
 }

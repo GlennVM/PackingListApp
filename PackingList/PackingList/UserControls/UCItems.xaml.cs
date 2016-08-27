@@ -1,4 +1,5 @@
 ﻿using PackingList.Models;
+using PackingList.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -21,17 +22,19 @@ namespace PackingList.UserControls
     public sealed partial class UCItems : UserControl
     {
         private Panel addPanel;
-        public UCItems(Trip selectedTrip, Panel addPanel)
+        MainViewModel vm;
+        public UCItems(Trip selectedTrip, Panel addPanel, MainViewModel vm)
         {
             this.InitializeComponent();
             this.DataContext = selectedTrip;
+            this.vm = vm;
             this.addPanel = addPanel;
             //base.OnNavigatedTo(e);
         }
 
         private void AddItem(object sender, RoutedEventArgs e)
         {
-            var myControl = new PackingList.UserControls.UCAddItem();
+            var myControl = new PackingList.UserControls.UCAddItem(vm);
             addPanel.Children.Clear();
             addPanel.Children.Add(myControl);
         }

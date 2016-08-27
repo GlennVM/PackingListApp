@@ -9,10 +9,10 @@
     d:DesignHeight="300"
     d:DesignWidth="400">
 
-    <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <RelativePanel Background="Azure">
         <StackPanel x:ConnectionId='1' x:Name="trip">
-            <Button x:ConnectionId='2' Content="Add Item" Width="400" Height="100"                ></Button>
-            <ListView x:ConnectionId='3' Margin="10" Name="lvDataBinding" ItemsSource="{Binding items}">
+            <Button x:ConnectionId='2' Content="Add Item" Width="400" Height="100"                 Background="#00D0FF"></Button>
+            <ListView x:ConnectionId='3' Margin="10" Name="lvDataBinding" ItemsSource="{Binding items}" Background="Azure" ScrollViewer.VerticalScrollMode="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Height="500">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>

@@ -1,5 +1,5 @@
-﻿<UserControl
-    x:Class="PackingList.UserControls.UCItems"
+﻿<UserControl x:ConnectionId='1'
+    x:Class="PackingList.UserControls.UCItemDictionary"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:PackingList.UserControls"
@@ -10,13 +10,13 @@
     d:DesignWidth="400">
 
     <RelativePanel Background="Azure">
-        <StackPanel x:Name="trip">
-            <Button Content="Add Item" Width="400" Height="100" Click="AddItem" Background="#00D0FF"></Button>
-            <ListView Margin="10" Name="lvDataBinding" ItemsSource="{Binding items}" Background="Azure" ScrollViewer.VerticalScrollMode="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Height="500">
+        <StackPanel x:ConnectionId='2' x:Name="itemDictionary">
+            <Button x:ConnectionId='3' Content="Add Item" Height="100" Width="400" Background="#00D0FF"                ></Button>
+            <ListView x:ConnectionId='4' Margin="10" Name="lvDataBinding"                                          Background="Azure" ScrollViewer.VerticalScrollMode="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Height="600" Width="400">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>
-                            <CheckBox Content="{Binding Name}" IsChecked="{Binding Checked}" />
+                            <TextBlock Text="{Binding Name}" Width="400"></TextBlock>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
@@ -24,3 +24,4 @@
         </StackPanel>
     </RelativePanel>
 </UserControl>
+

@@ -112,8 +112,14 @@
     <Compile Include="TripDetails.xaml.cs">
       <DependentUpon>TripDetails.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UCAddDictionaryItem.xaml.cs">
+      <DependentUpon>UCAddDictionaryItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UCAddItem.xaml.cs">
       <DependentUpon>UCAddItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCItemDictionary.xaml.cs">
+      <DependentUpon>UCItemDictionary.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UCItems.xaml.cs">
       <DependentUpon>UCItems.xaml</DependentUpon>
@@ -152,7 +158,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\UCAddDictionaryItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\UCAddItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UCItemDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

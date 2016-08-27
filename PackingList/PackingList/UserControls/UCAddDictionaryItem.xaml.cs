@@ -18,14 +18,13 @@ using Windows.UI.Xaml.Navigation;
 
 namespace PackingList.UserControls
 {
-    public sealed partial class UCAddItem : UserControl
+    public sealed partial class UCAddDictionaryItem : UserControl
     {
         MainViewModel vm;
-        public UCAddItem(MainViewModel vm)
+        public UCAddDictionaryItem(MainViewModel vm)
         {
             this.InitializeComponent();
             this.vm = vm;
-            vm.laadItemDictionary();
         }
     }
 }

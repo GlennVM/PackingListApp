@@ -16,7 +16,7 @@
     </Pivot>-->
 
     <SplitView x:ConnectionId='1' x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="150"
-               Background="Black" PaneBackground="DarkSeaGreen">
+               Background="White" PaneBackground="#00D0FF">
         <SplitView.Pane>
             <StackPanel>
                 <Button x:ConnectionId='2' x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
@@ -35,13 +35,13 @@
         </SplitView.Pane>
         <SplitView.Content>
             <Grid x:ConnectionId='5' x:Name="MySplitViewContent">
-                <StackPanel x:ConnectionId='6' x:Name="tripsPanel" Background="DarkSeaGreen" HorizontalAlignment="Left" Height="800" Margin="0,0,50,0" VerticalAlignment="Top" Width="400">
+                <StackPanel x:ConnectionId='6' x:Name="tripsPanel" Background="Azure" HorizontalAlignment="Left" Height="800" Margin="0,0,50,0" VerticalAlignment="Top" Width="400">
                     
                 </StackPanel>
-                <StackPanel x:ConnectionId='7' x:Name="itemsPanel" Background="DarkSeaGreen" HorizontalAlignment="Center" Height="800" Margin="0,0,0,0" VerticalAlignment="Top" Width="400">
+                <StackPanel x:ConnectionId='7' x:Name="itemsPanel" Background="Azure" HorizontalAlignment="Center" Height="800" Margin="0,0,0,0" VerticalAlignment="Top" Width="400">
                     
                 </StackPanel>
-                <StackPanel x:ConnectionId='8' x:Name="addPanel" Background="DarkSeaGreen" HorizontalAlignment="Right" Height="800" Margin="0,0,0,0" VerticalAlignment="Top" Width="400">
+                <StackPanel x:ConnectionId='8' x:Name="addPanel" Background="Azure" HorizontalAlignment="Right" Height="800" Margin="0,0,0,0" VerticalAlignment="Top" Width="400">
                     
                 </StackPanel>
             </Grid>

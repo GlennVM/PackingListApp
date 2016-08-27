@@ -1345,3 +1345,13 @@ C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\User
 C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCAddItem.g.cs
 C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCAddItem.xaml
 C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCAddItem.xbf
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCItemDictionary.g.i.cs
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCItemDictionary.g.cs
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCItemDictionary.xaml
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCItemDictionary.xbf
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\bin\x86\Debug\UserControls\UCItemDictionary.xbf
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\bin\x86\Debug\UserControls\UCAddDictionaryItem.xbf
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCAddDictionaryItem.g.i.cs
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCAddDictionaryItem.g.cs
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCAddDictionaryItem.xaml
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCAddDictionaryItem.xbf
