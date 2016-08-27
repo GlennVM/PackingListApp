@@ -1,5 +1,6 @@
 App.xbf
 MainPage.xbf
 TripDetails.xbf
+UserControls\UCAddItem.xbf
 UserControls\UCItems.xbf
 UserControls\UCTrips.xbf

@@ -23,19 +23,27 @@ namespace PackingList.UserControls
     {
         private MainViewModel vm = new MainViewModel();
         private Panel mp;
-        public UCTrips(Panel sender)
+        private Panel ap;
+        public UCTrips(Panel itemsPanel, Panel addPanel)
         {
             this.InitializeComponent();
             vm.laadReizen();
-            this.mp = sender;
+            this.mp = itemsPanel;
+            this.ap = addPanel;
         }
 
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ListView lv = (ListView)sender;
             Trip geselecteerdeTrip = lv.SelectedItem as Trip;
-            var myControl = new PackingList.UserControls.UCItems(geselecteerdeTrip);
+            var myControl = new PackingList.UserControls.UCItems(geselecteerdeTrip, ap);
+            //Button btnAdd = new Button();
+            //btnAdd.Content = "Add Item";
+            //btnAdd.Height = 100;
+            //btnAdd.Width = 400;
             mp.Children.Clear();
+            ap.Children.Clear();
+            //mp.Children.Add(btnAdd);
             mp.Children.Add(myControl);
 
             //var frame = Window.Current.Content as Frame;

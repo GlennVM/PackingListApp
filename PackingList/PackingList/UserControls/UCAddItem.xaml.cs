@@ -1,5 +1,4 @@
-﻿using PackingList.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -18,22 +17,11 @@ using Windows.UI.Xaml.Navigation;
 
 namespace PackingList.UserControls
 {
-    public sealed partial class UCItems : UserControl
+    public sealed partial class UCAddItem : UserControl
     {
-        private Panel addPanel;
-        public UCItems(Trip selectedTrip, Panel addPanel)
+        public UCAddItem()
         {
             this.InitializeComponent();
-            this.DataContext = selectedTrip;
-            this.addPanel = addPanel;
-            //base.OnNavigatedTo(e);
-        }
-
-        private void AddItem(object sender, RoutedEventArgs e)
-        {
-            var myControl = new PackingList.UserControls.UCAddItem();
-            addPanel.Children.Clear();
-            addPanel.Children.Add(myControl);
         }
     }
 }

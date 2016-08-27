@@ -39,7 +39,7 @@ namespace PackingList
         private void Loadingtrips(object sender, RoutedEventArgs e)
         {
             MySplitView.IsPaneOpen = false;
-            var myControl = new PackingList.UserControls.UCTrips(itemsPanel);
+            var myControl = new PackingList.UserControls.UCTrips(itemsPanel, addPanel);
             tripsPanel.Children.Add(myControl);
         }
 
@@ -48,6 +48,7 @@ namespace PackingList
             MySplitView.IsPaneOpen = false;
             tripsPanel.Children.Clear();
             itemsPanel.Children.Clear();
+            addPanel.Children.Clear();
         }
     }
 }

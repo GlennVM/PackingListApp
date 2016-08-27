@@ -11,6 +11,7 @@
 
     <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel x:Name="trip">
+            <Button Content="Add Item" Width="400" Height="100" Click="AddItem"></Button>
             <ListView Margin="10" Name="lvDataBinding" ItemsSource="{Binding items}">
                 <ListView.ItemTemplate>
                     <DataTemplate>

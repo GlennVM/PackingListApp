@@ -1340,3 +1340,8 @@ C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\User
 C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCItems.g.cs
 C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCItems.xaml
 C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCItems.xbf
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\bin\x86\Debug\UserControls\UCAddItem.xbf
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCAddItem.g.i.cs
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCAddItem.g.cs
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCAddItem.xaml
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCAddItem.xbf
