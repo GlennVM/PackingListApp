@@ -103,6 +103,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\Task.cs" />
     <Compile Include="Models\Trip.cs" />
     <Compile Include="Models\TripComponent.cs" />
     <Compile Include="Models\TripException.cs" />
@@ -118,11 +119,17 @@
     <Compile Include="UserControls\UCAddItem.xaml.cs">
       <DependentUpon>UCAddItem.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UCAddTask.xaml.cs">
+      <DependentUpon>UCAddTask.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UCItemDictionary.xaml.cs">
       <DependentUpon>UCItemDictionary.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UCItems.xaml.cs">
       <DependentUpon>UCItems.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCTasks.xaml.cs">
+      <DependentUpon>UCTasks.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UCTrip.xaml.cs">
       <DependentUpon>UCTrip.xaml</DependentUpon>
@@ -169,11 +176,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\UCAddTask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\UCItemDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\UCItems.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UCTasks.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

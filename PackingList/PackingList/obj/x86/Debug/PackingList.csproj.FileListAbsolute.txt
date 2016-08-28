@@ -1360,3 +1360,13 @@ C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\User
 C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCTrip.xaml
 C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCTrip.xbf
 C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\bin\x86\Debug\UserControls\UCTrip.xbf
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\bin\x86\Debug\UserControls\UCTasks.xbf
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCTasks.g.i.cs
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCTasks.g.cs
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCTasks.xaml
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCTasks.xbf
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\bin\x86\Debug\UserControls\UCAddTask.xbf
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCAddTask.g.i.cs
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCAddTask.g.cs
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCAddTask.xaml
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCAddTask.xbf

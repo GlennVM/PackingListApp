@@ -36,9 +36,8 @@ namespace PackingList.UserControls
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            Trip trip = new Trip() { Title = txtTrip.Text.ToString(), items = new List<TripComponent>() };
-            vm.TripComponent.Add(trip);
-            middel.Children.Clear();
+            Trip trip = new Trip() { Title = txtTrip.Text.ToString(), items = new List<TripComponent>(), tasks = new List<TripComponent>() };
+            vm.addTrip(trip);
             left.Children.Clear();
             var myControl = new PackingList.UserControls.UCTrips(left, middel, right, vm);
             left.Children.Add(myControl);

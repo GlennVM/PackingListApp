@@ -40,10 +40,11 @@ namespace PackingList.UserControls
             ListView lv = (ListView)sender;
             Trip geselecteerdeTrip = lv.SelectedItem as Trip;
             var myControl = new PackingList.UserControls.UCItems(geselecteerdeTrip, mp, ap, vm);
+            var controlTasks = new PackingList.UserControls.UCTasks(geselecteerdeTrip, mp, ap, vm);
             mp.Children.Clear();
             ap.Children.Clear();
             mp.Children.Add(myControl);
-
+            ap.Children.Add(controlTasks);
             //var frame = Window.Current.Content as Frame;
             //frame.Navigate(typeof(TripDetails), geselecteerdeTrip);
         }
@@ -51,8 +52,8 @@ namespace PackingList.UserControls
         private void btnAddTrip_Click(object sender, RoutedEventArgs e)
         {
             var myControl = new PackingList.UserControls.UCTrip(left, mp, ap, vm);
-            mp.Children.Clear();
-            mp.Children.Add(myControl);
+            left.Children.Clear();
+            left.Children.Add(myControl);
         }
     }
 }

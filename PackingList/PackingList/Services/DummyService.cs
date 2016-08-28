@@ -28,10 +28,22 @@ namespace PackingList.Services
             items3.Add(new Item() { Name = "Broek", Checked = false, Amount = 2, Category = "Clothing" });
             items3.Add(new Item() { Name = "Haardroger", Checked = true, Amount = 2, Category = "Clothing" });
 
+            List<TripComponent> tasks = new List<TripComponent>();
+            tasks.Add(new Models.Task() { Name = "Reistoelating gaan halen", Checked = false});
+            tasks.Add(new Models.Task() { Name = "Stadhuis", Checked = false });
+
+            List<TripComponent> tasks2 = new List<TripComponent>();
+            tasks2.Add(new Models.Task() { Name = "Reistoelating gaan halen", Checked = false });
+            tasks2.Add(new Models.Task() { Name = "Tickets afprinten", Checked = false });
+
+            List<TripComponent> tasks3 = new List<TripComponent>();
+            tasks3.Add(new Models.Task() { Name = "Paspoort gaan halen", Checked = false });
+            tasks3.Add(new Models.Task() { Name = "Boekjes gaan halen", Checked = false });
+
             trips = new List<TripComponent>();
-            trips.Add(new Trip() { Title = "Demenarken", items = items});
-            trips.Add(new Trip() { Title = "Italië", items = items2 });
-            trips.Add(new Trip() { Title = "Duitsland", items = items3 });
+            trips.Add(new Trip() { Title = "Demenarken", items = items, tasks = tasks});
+            trips.Add(new Trip() { Title = "Italië", items = items2, tasks = tasks2 });
+            trips.Add(new Trip() { Title = "Duitsland", items = items3, tasks = tasks3 });
 
             itemDictionary = new List<TripComponent>();
 

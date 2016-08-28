@@ -24,9 +24,14 @@ namespace PackingList.ViewModels
             ItemDictionary = dm.retrieveItemDictionary();
         }
 
-        public void addItemToDictionary(TripComponent item)
+        public void addItemToDictionary(Item item)
         {
             ItemDictionary.Add(item);
+        }
+
+        public void addTrip(Trip trip)
+        {
+            TripComponent.Add(trip);
         }
     }
 }

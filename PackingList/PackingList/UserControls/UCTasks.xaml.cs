@@ -19,13 +19,13 @@ using Windows.UI.Xaml.Navigation;
 
 namespace PackingList.UserControls
 {
-    public sealed partial class UCItems : UserControl
+    public sealed partial class UCTasks : UserControl
     {
         private Panel middel;
         private Panel right;
         MainViewModel vm;
         private Trip selectedTrip;
-        public UCItems(Trip selectedTrip, Panel middel, Panel right, MainViewModel vm)
+        public UCTasks(Trip selectedTrip, Panel middel, Panel right, MainViewModel vm)
         {
             this.InitializeComponent();
             this.DataContext = selectedTrip;
@@ -38,20 +38,21 @@ namespace PackingList.UserControls
 
         private void AddItem(object sender, RoutedEventArgs e)
         {
-            var myControl = new PackingList.UserControls.UCAddItem(vm, middel, right, selectedTrip);
-            middel.Children.Clear();
-            middel.Children.Add(myControl);
+            var myControl = new PackingList.UserControls.UCAddTask(vm, middel, right, selectedTrip);
+            right.Children.Clear();
+            right.Children.Add(myControl);
         }
 
         private void CheckBox_Click(object sender, RoutedEventArgs e)
         {
             CheckBox box = (CheckBox)sender;
-            Item updated = box.DataContext as Item;
-            
-            if(updated.Checked == false)
+            Task updated = box.DataContext as Task;
+
+            if (updated.Checked == false)
             {
                 updated.Checked = true;
-            } else
+            }
+            else
             {
                 updated.Checked = false;
             }

@@ -18,7 +18,7 @@
                         <StackPanel>
                             <RelativePanel>
                             <RelativePanel x:Name="rpCheck">
-                                <CheckBox Content="{Binding Name}"  IsChecked="{Binding Checked}" Width="175">
+                                <CheckBox x:ConnectionId='4' Content="{Binding Name}"  IsChecked="{Binding Checked}" Width="175"                       >
                                 </CheckBox>
                             </RelativePanel>
                             <RelativePanel RelativePanel.RightOf="rpCheck" x:Name="rpCat">

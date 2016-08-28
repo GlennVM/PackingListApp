@@ -11,6 +11,7 @@ namespace PackingList.Models
         public string Title { get; set; }
 
         public IList<TripComponent> items { get; set; }
+        public IList<TripComponent> tasks { get; set; }
 
        // IList<TripComponent> items = new List<TripComponent>();
         

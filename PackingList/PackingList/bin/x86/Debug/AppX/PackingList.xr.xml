@@ -6,6 +6,7 @@
     <RootPropertyPathName Name="Checked" />
     <RootPropertyPathName Name="Category" />
     <RootPropertyPathName Name="Amount" />
+    <RootPropertyPathName Name="tasks" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -84,6 +85,7 @@
       <RootProperty Name="Content" />
       <RootProperty Name="IsChecked" />
       <RootProperty Name="Width" />
+      <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="PackingList.TripDetails" />
     <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
@@ -109,6 +111,7 @@
     <RootType FullName="PackingList.UserControls.UCAddDictionaryItem" />
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension" />
     <RootType FullName="PackingList.UserControls.UCAddItem" />
+    <RootType FullName="PackingList.UserControls.UCAddTask" />
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootMethod Name="GetVerticalScrollMode" />
       <RootMethod Name="SetVerticalScrollMode" />
@@ -124,6 +127,7 @@
       <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="PackingList.UserControls.UCItems" />
+    <RootType FullName="PackingList.UserControls.UCTasks" />
     <RootType FullName="PackingList.UserControls.UCTrip" />
     <RootType FullName="Windows.UI.Xaml.Controls.ItemsPanelTemplate">
       <RootProperty Name="Template" />

@@ -3,7 +3,9 @@ MainPage.xbf
 TripDetails.xbf
 UserControls\UCAddDictionaryItem.xbf
 UserControls\UCAddItem.xbf
+UserControls\UCAddTask.xbf
 UserControls\UCItemDictionary.xbf
 UserControls\UCItems.xbf
+UserControls\UCTasks.xbf
 UserControls\UCTrip.xbf
 UserControls\UCTrips.xbf
