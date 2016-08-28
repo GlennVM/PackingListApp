@@ -45,7 +45,8 @@ namespace PackingList
             tripsPanel.Children.Clear();
             itemsPanel.Children.Clear();
             addPanel.Children.Clear();
-            var myControl = new PackingList.UserControls.UCTrips(itemsPanel, addPanel, vm);
+            vm.laadReizen();
+            var myControl = new PackingList.UserControls.UCTrips(tripsPanel, itemsPanel, addPanel, vm);
             tripsPanel.Children.Add(myControl);
         }
 
@@ -55,7 +56,8 @@ namespace PackingList
             tripsPanel.Children.Clear();
             itemsPanel.Children.Clear();
             addPanel.Children.Clear();
-            var myControl = new PackingList.UserControls.UCItemDictionary(itemsPanel, vm);
+            vm.laadItemDictionary();
+            var myControl = new PackingList.UserControls.UCItemDictionary(tripsPanel, itemsPanel, vm);
             tripsPanel.Children.Add(myControl);
         }
     }

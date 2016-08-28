@@ -10,9 +10,15 @@
     d:DesignWidth="400">
 
     <ListView xmlns:m="using:PackingList.Models">
-        <TextBlock x:ConnectionId='1' x:Name="txtItem" Text="Enter the name of the item you want to add:" Margin="0,50,0,0" VerticalAlignment="Top"></TextBlock>
-        <TextBox x:ConnectionId='2' Name="txtAmount" Width="350"></TextBox>
-        <Button x:ConnectionId='3' x:Name="btnAdd" Content="Add" Width="350" Height="100" Background="#00D0FF" VerticalAlignment="Bottom" Margin="0,50,0,0"></Button>
+        <TextBlock Text="Enter the name of the item you want to add:" Margin="0,50,0,0" VerticalAlignment="Top"></TextBlock>
+        <TextBox x:ConnectionId='1' Name="txtItem" Width="350"></TextBox>
+        <TextBlock Text="Select the category of the item you want to add:" Margin="0,50,0,0" VerticalAlignment="Top"></TextBlock>
+        <ComboBox x:ConnectionId='2' x:Name="cmbCategory" Width="350">
+            <ComboBoxItem Content="Clothing"></ComboBoxItem>
+            <ComboBoxItem Content="Bathroom"></ComboBoxItem>
+            <ComboBoxItem Content="Applience"></ComboBoxItem>
+        </ComboBox>
+        <Button x:ConnectionId='3' x:Name="btnAdd" Content="Add" Width="350" Height="100" Background="#00D0FF" VerticalAlignment="Bottom" Margin="0,50,0,0"                     ></Button>
     </ListView>
 </UserControl>
 

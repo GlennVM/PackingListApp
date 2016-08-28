@@ -19,31 +19,29 @@ using Windows.UI.Xaml.Navigation;
 
 namespace PackingList.UserControls
 {
-    public sealed partial class UCAddItem : UserControl
+    public sealed partial class UCTrip : UserControl
     {
-        MainViewModel vm;
+        Panel left;
         Panel middel;
         Panel right;
-        Trip selectedTrip;
-        public UCAddItem(MainViewModel vm, Panel middel, Panel right, Trip selectedTrip)
+        MainViewModel vm;
+        public UCTrip(Panel left, Panel middel, Panel right, MainViewModel vm)
         {
             this.InitializeComponent();
             this.vm = vm;
-            vm.laadItemDictionary();
-            this.selectedTrip = selectedTrip;
+            this.left = left;
             this.middel = middel;
             this.right = right;
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            Item selectedItem = (Item)cmbItem.SelectedItem;
-            selectedItem.Amount = int.Parse(txtAmount.Text.ToString());
-            selectedTrip.Add(selectedItem);
-            right.Children.Clear();
+            Trip trip = new Trip() { Title = txtTrip.Text.ToString(), items = new List<TripComponent>() };
+            vm.TripComponent.Add(trip);
             middel.Children.Clear();
-            var myControl = new PackingList.UserControls.UCItems(selectedTrip, middel, right, vm);
-            middel.Children.Add(myControl);
+            left.Children.Clear();
+            var myControl = new PackingList.UserControls.UCTrips(left, middel, right, vm);
+            left.Children.Add(myControl);
         }
     }
 }

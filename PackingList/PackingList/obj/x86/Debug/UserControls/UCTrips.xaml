@@ -8,20 +8,22 @@
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="400">
-
-    <ListView x:ConnectionId='2' xmlns:m="using:PackingList.Models"                                                                                      >
-        <ListView.ItemsPanel>
-            <ItemsPanelTemplate>
-                <WrapGrid Orientation="Horizontal" ItemHeight="100" ItemWidth="400" />
-            </ItemsPanelTemplate>
-        </ListView.ItemsPanel>
-        <ListView.ItemTemplate>
-            <DataTemplate                    >
-                <StackPanel x:ConnectionId='3' Orientation="Horizontal" Margin="10">
-                    <TextBlock x:ConnectionId='4'                      />
-                </StackPanel>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+    <StackPanel>
+        <Button x:ConnectionId='2' x:Name="btnAddTrip" Content="Add Trip" Width="400" Height="100" Background="#00D0FF"                         ></Button>
+        <ListView x:ConnectionId='3' xmlns:m="using:PackingList.Models"                                                                                      >
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapGrid Orientation="Horizontal" ItemHeight="100" ItemWidth="400" />
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate                    >
+                    <StackPanel x:ConnectionId='4' Orientation="Horizontal" Margin="10">
+                        <TextBlock x:ConnectionId='5'                      />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackPanel>
 </UserControl>
 

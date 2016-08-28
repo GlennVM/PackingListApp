@@ -8,19 +8,21 @@
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="400">
-
-    <ListView xmlns:m="using:PackingList.Models"  ItemsSource="{x:Bind vm.TripComponent}" SelectionChanged="ListView_SelectionChanged">
-        <ListView.ItemsPanel>
-            <ItemsPanelTemplate>
-                <WrapGrid Orientation="Horizontal" ItemHeight="100" ItemWidth="400" />
-            </ItemsPanelTemplate>
-        </ListView.ItemsPanel>
-        <ListView.ItemTemplate>
-            <DataTemplate x:DataType="m:Trip">
-                <StackPanel Orientation="Horizontal" Margin="10">
-                    <TextBlock Text="{x:Bind Title}"/>
-                </StackPanel>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+    <StackPanel>
+        <Button x:Name="btnAddTrip" Content="Add Trip" Width="400" Height="100" Background="#00D0FF" Click="btnAddTrip_Click"></Button>
+        <ListView xmlns:m="using:PackingList.Models"  ItemsSource="{x:Bind vm.TripComponent}" SelectionChanged="ListView_SelectionChanged">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapGrid Orientation="Horizontal" ItemHeight="100" ItemWidth="400" />
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="m:Trip">
+                    <StackPanel Orientation="Horizontal" Margin="10">
+                        <TextBlock Text="{x:Bind Title}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackPanel>
 </UserControl>

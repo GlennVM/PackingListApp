@@ -21,22 +21,26 @@ namespace PackingList.UserControls
 {
     public sealed partial class UCItems : UserControl
     {
-        private Panel addPanel;
+        private Panel middel;
+        private Panel right;
         MainViewModel vm;
-        public UCItems(Trip selectedTrip, Panel addPanel, MainViewModel vm)
+        private Trip selectedTrip;
+        public UCItems(Trip selectedTrip, Panel middel, Panel right, MainViewModel vm)
         {
             this.InitializeComponent();
             this.DataContext = selectedTrip;
             this.vm = vm;
-            this.addPanel = addPanel;
+            this.middel = middel;
+            this.right = right;
+            this.selectedTrip = selectedTrip;
             //base.OnNavigatedTo(e);
         }
 
         private void AddItem(object sender, RoutedEventArgs e)
         {
-            var myControl = new PackingList.UserControls.UCAddItem(vm);
-            addPanel.Children.Clear();
-            addPanel.Children.Add(myControl);
+            var myControl = new PackingList.UserControls.UCAddItem(vm, middel, right, selectedTrip);
+            right.Children.Clear();
+            right.Children.Add(myControl);
         }
     }
 }

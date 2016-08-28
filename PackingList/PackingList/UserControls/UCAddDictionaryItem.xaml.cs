@@ -1,4 +1,5 @@
-﻿using PackingList.ViewModels;
+﻿using PackingList.Models;
+using PackingList.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -21,10 +22,27 @@ namespace PackingList.UserControls
     public sealed partial class UCAddDictionaryItem : UserControl
     {
         MainViewModel vm;
-        public UCAddDictionaryItem(MainViewModel vm)
+        Panel left;
+        Panel middel;
+        public UCAddDictionaryItem(MainViewModel vm, Panel left, Panel middel)
         {
             this.InitializeComponent();
             this.vm = vm;
+            this.left = left;
+            this.middel = middel;
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            String item = txtItem.Text.ToString();
+            String cat = (cmbCategory.SelectedItem as ComboBoxItem).Content.ToString();
+            Item comp = new Item() { Name = item, Category = cat };
+            vm.addItemToDictionary(comp);
+            middel.Children.Clear();
+
+            var myControl = new PackingList.UserControls.UCItemDictionary(left, middel, vm);
+            left.Children.Clear();
+            left.Children.Add(myControl);
         }
     }
 }

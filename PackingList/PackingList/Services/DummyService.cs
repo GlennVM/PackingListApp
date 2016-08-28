@@ -14,31 +14,19 @@ namespace PackingList.Services
         public DummyService()
         {
             List<TripComponent> items = new List<TripComponent>();
-            items.Add(new Item() {Name = "Item 1", Checked = true});
-            items.Add(new Item() { Name = "Item 2", Checked = false });
-            items.Add(new Item() { Name = "Item 3", Checked = true });
-            items.Add(new Item() { Name = "Hemd", Checked = true });
-            items.Add(new Item() { Name = "Broek", Checked = false });
-            items.Add(new Item() { Name = "Haardroger", Checked = true });
-            items.Add(new Item() { Name = "Broek", Checked = true });
-            items.Add(new Item() { Name = "Shirt", Checked = false });
-            items.Add(new Item() { Name = "Hemd", Checked = true });
-            items.Add(new Item() { Name = "Hemd", Checked = true });
-            items.Add(new Item() { Name = "Broek", Checked = false });
-            items.Add(new Item() { Name = "Haardroger", Checked = true });
-            items.Add(new Item() { Name = "Broek", Checked = true });
-            items.Add(new Item() { Name = "Shirt", Checked = false });
-            items.Add(new Item() { Name = "Hemd", Checked = true });
+            items.Add(new Item() { Name = "Broek", Checked = true, Amount = 6, Category = "Clothing"});
+            items.Add(new Item() { Name = "Shirt", Checked = false, Amount = 5, Category = "Clothing" });
+            items.Add(new Item() { Name = "Hemd", Checked = true, Amount = 1, Category = "Clothing" });
 
             List<TripComponent> items2 = new List<TripComponent>();
-            items2.Add(new Item() { Name = "Broek", Checked = true });
-            items2.Add(new Item() { Name = "Shirt", Checked = false });
-            items2.Add(new Item() { Name = "Hemd", Checked = true });
+            items2.Add(new Item() { Name = "Broek", Checked = true, Amount = 2, Category = "Clothing" });
+            items2.Add(new Item() { Name = "Shirt", Checked = false, Amount = 2, Category = "Clothing" });
+            items2.Add(new Item() { Name = "Hemd", Checked = true, Amount = 2, Category = "Clothing" });
 
             List<TripComponent> items3 = new List<TripComponent>();
-            items3.Add(new Item() { Name = "Hemd", Checked = true });
-            items3.Add(new Item() { Name = "Broek", Checked = false });
-            items3.Add(new Item() { Name = "Haardroger", Checked = true });
+            items3.Add(new Item() { Name = "Hemd", Checked = true, Amount = 2, Category = "Clothing" });
+            items3.Add(new Item() { Name = "Broek", Checked = false, Amount = 2, Category = "Clothing" });
+            items3.Add(new Item() { Name = "Haardroger", Checked = true, Amount = 2, Category = "Clothing" });
 
             trips = new List<TripComponent>();
             trips.Add(new Trip() { Title = "Demenarken", items = items});
@@ -47,13 +35,13 @@ namespace PackingList.Services
 
             itemDictionary = new List<TripComponent>();
 
-            itemDictionary.Add(new Item() { Name = "Hemd", Checked = false });
-            itemDictionary.Add(new Item() { Name = "Broek", Checked = false });
-            itemDictionary.Add(new Item() { Name = "T-Shirt", Checked = false });
-            itemDictionary.Add(new Item() { Name = "Schoenen", Checked = false });
-            itemDictionary.Add(new Item() { Name = "Tandenborstel", Checked = false });
-            itemDictionary.Add(new Item() { Name = "Kam", Checked = false });
-            itemDictionary.Add(new Item() { Name = "Gel", Checked = false });
+            itemDictionary.Add(new Item() { Name = "Hemd", Checked = false, Category = "Clothing" });
+            itemDictionary.Add(new Item() { Name = "Broek", Checked = false, Category = "Clothing" });
+            itemDictionary.Add(new Item() { Name = "T-Shirt", Checked = false, Category = "Clothing" });
+            itemDictionary.Add(new Item() { Name = "Schoenen", Checked = false, Category = "Clothing" });
+            itemDictionary.Add(new Item() { Name = "Tandenborstel", Checked = false, Category = "Bathroom" });
+            itemDictionary.Add(new Item() { Name = "Kam", Checked = false, Category = "Bathroom" });
+            itemDictionary.Add(new Item() { Name = "Gel", Checked = false, Category = "Bathroom" });
         }
 
         public List<TripComponent> retrieveTrips()

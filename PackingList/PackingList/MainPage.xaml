@@ -36,19 +36,19 @@
         <SplitView.Content>
             <Grid x:Name="MySplitViewContent">
                 <StackPanel x:Name="tripsPanel" Background="Azure" HorizontalAlignment="Left" Height="800" Margin="0,0,50,0" VerticalAlignment="Top" Width="400">
-                    
+
                 </StackPanel>
                 <StackPanel x:Name="itemsPanel" Background="Azure" HorizontalAlignment="Center" Height="800" Margin="0,0,0,0" VerticalAlignment="Top" Width="400">
-                    
+
                 </StackPanel>
                 <StackPanel x:Name="addPanel" Background="Azure" HorizontalAlignment="Right" Height="800" Margin="0,0,0,0" VerticalAlignment="Top" Width="400">
-                    
+
                 </StackPanel>
             </Grid>
         </SplitView.Content>
     </SplitView>
 
-    <Page.BottomAppBar>
+    <!--<Page.BottomAppBar>
         <CommandBar>
             <CommandBar.PrimaryCommands>
                 <AppBarButton Icon="Home" Label="Home"/>
@@ -57,5 +57,5 @@
                 <AppBarButton Icon="Setting" Label="Settings"/>
             </CommandBar.SecondaryCommands>
         </CommandBar>
-    </Page.BottomAppBar>
+    </Page.BottomAppBar>-->
 </Page>

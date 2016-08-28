@@ -16,7 +16,10 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>
-                            <TextBlock Text="{Binding Name}" Width="400"></TextBlock>
+                            <RelativePanel>
+                                <TextBlock x:Name="txtName"  Text="{Binding Name}" Width="200"></TextBlock>
+                                <TextBlock Text="{Binding Category}" RelativePanel.RightOf="txtName"></TextBlock>
+                            </RelativePanel>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>

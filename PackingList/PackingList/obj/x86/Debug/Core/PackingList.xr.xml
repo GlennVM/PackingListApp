@@ -4,6 +4,8 @@
     <RootPropertyPathName Name="items" />
     <RootPropertyPathName Name="Name" />
     <RootPropertyPathName Name="Checked" />
+    <RootPropertyPathName Name="Category" />
+    <RootPropertyPathName Name="Amount" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -11,7 +13,6 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Content" />
-      <RootProperty Name="BottomAppBar" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.SplitView">
       <RootProperty Name="DisplayMode" />
@@ -53,18 +54,14 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Children" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
-      <RootProperty Name="PrimaryCommands" />
-      <RootProperty Name="SecondaryCommands" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
-      <RootProperty Name="Icon" />
-      <RootProperty Name="Label" />
-    </RootType>
     <RootType FullName="PackingList.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
       <RootProperty Name="Background" />
       <RootProperty Name="Children" />
+      <RootMethod Name="GetRightOf" />
+      <RootMethod Name="SetRightOf" />
+      <RootMethod Name="GetBelow" />
+      <RootMethod Name="SetBelow" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
@@ -86,6 +83,7 @@
     <RootType FullName="Windows.UI.Xaml.Controls.CheckBox">
       <RootProperty Name="Content" />
       <RootProperty Name="IsChecked" />
+      <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="PackingList.TripDetails" />
     <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
@@ -95,9 +93,9 @@
       <RootProperty Name="Name" />
       <RootProperty Name="Width" />
     </RootType>
-    <RootType FullName="PackingList.UserControls.UCAddDictionaryItem" />
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="Width" />
+      <RootProperty Name="Items" />
       <RootProperty Name="Height" />
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
@@ -105,6 +103,10 @@
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="ItemTemplate" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ComboBoxItem">
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="PackingList.UserControls.UCAddDictionaryItem" />
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension" />
     <RootType FullName="PackingList.UserControls.UCAddItem" />
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
@@ -114,7 +116,15 @@
       <RootMethod Name="SetVerticalScrollBarVisibility" />
     </RootType>
     <RootType FullName="PackingList.UserControls.UCItemDictionary" />
+    <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Fill" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
+    </RootType>
     <RootType FullName="PackingList.UserControls.UCItems" />
+    <RootType FullName="PackingList.UserControls.UCTrip" />
     <RootType FullName="Windows.UI.Xaml.Controls.ItemsPanelTemplate">
       <RootProperty Name="Template" />
     </RootType>

@@ -1355,3 +1355,8 @@ C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\User
 C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCAddDictionaryItem.g.cs
 C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCAddDictionaryItem.xaml
 C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCAddDictionaryItem.xbf
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCTrip.g.i.cs
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCTrip.g.cs
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCTrip.xaml
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\obj\x86\Debug\UserControls\UCTrip.xbf
+C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\bin\x86\Debug\UserControls\UCTrip.xbf

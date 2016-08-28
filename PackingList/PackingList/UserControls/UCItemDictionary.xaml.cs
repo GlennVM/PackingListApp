@@ -21,20 +21,22 @@ namespace PackingList.UserControls
     public sealed partial class UCItemDictionary : UserControl
     {
         private MainViewModel vm;
-        Panel panel;
-        public UCItemDictionary(Panel panel, MainViewModel vm)
+        Panel left;
+        Panel middel;
+        public UCItemDictionary(Panel left, Panel middel, MainViewModel vm)
         {
             this.InitializeComponent();
             this.vm = vm;
             vm.laadItemDictionary();
-            this.panel = panel;
+            this.left = left;
+            this.middel = middel;
         }
     
         private void AddItem(object sender, RoutedEventArgs e)
         {
-            var myControl = new PackingList.UserControls.UCAddDictionaryItem(vm);
-            panel.Children.Clear();
-            panel.Children.Add(myControl);
+            var myControl = new PackingList.UserControls.UCAddDictionaryItem(vm, left, middel);
+            middel.Children.Clear();
+            middel.Children.Add(myControl);
         }
     }
 }

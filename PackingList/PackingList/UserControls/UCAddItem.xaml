@@ -11,7 +11,7 @@
 
     <ListView xmlns:m="using:PackingList.Models">
         <TextBlock x:Name="txtItem" Text="Select the item you want to add" Margin="0,50,0,0" VerticalAlignment="Top"></TextBlock>
-        <ComboBox Width="350" Height="50" Margin="0,50,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" ItemsSource="{x:Bind vm.ItemDictionary}">
+        <ComboBox x:Name="cmbItem" Width="350" Height="50" Margin="0,50,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" ItemsSource="{x:Bind vm.ItemDictionary}">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -22,6 +22,6 @@
         </ComboBox>
         <TextBlock Text="Amount:"></TextBlock>
         <TextBox Name="txtAmount" Width="350"></TextBox>
-        <Button x:Name="btnAdd" Content="Add" Width="350" Height="100" Background="#00D0FF" VerticalAlignment="Bottom" Margin="0,50,0,0"></Button>
+        <Button x:Name="btnAdd" Content="Add" Width="350" Height="100" Background="#00D0FF" VerticalAlignment="Bottom" Margin="0,50,0,0" Click="btnAdd_Click"></Button>
     </ListView>
 </UserControl>
