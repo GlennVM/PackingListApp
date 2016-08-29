@@ -32,7 +32,7 @@ namespace PackingList.ViewModels
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 // New code:
-                HttpResponseMessage response = await client.GetAsync("api/user/2");
+                HttpResponseMessage response = await client.GetAsync("api/user/1");
                 if (response.IsSuccessStatusCode)
                 {
                     var jsonAsString = await response.Content.ReadAsStringAsync();
@@ -42,14 +42,12 @@ namespace PackingList.ViewModels
                     ItemDictionary = selectedUser.ItemDictionary;
                 }
             }
-
-            
         }
         
 
         public void laadItemDictionary()
         {
-            ItemDictionary = dm.retrieveItemDictionary();
+            ItemDictionary = selectedUser.ItemDictionary;
         }
 
         public void addItemToDictionary(Item item)
