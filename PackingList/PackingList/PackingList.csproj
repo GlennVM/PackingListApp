@@ -108,6 +108,7 @@
     <Compile Include="Models\TripComponent.cs" />
     <Compile Include="Models\TripException.cs" />
     <Compile Include="Models\TripIterator.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DummyService.cs" />
     <Compile Include="TripDetails.xaml.cs">

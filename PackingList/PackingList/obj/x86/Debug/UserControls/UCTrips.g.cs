@@ -239,7 +239,7 @@ namespace PackingList.UserControls
                     }
                 }
             }
-            private void Update_vm_TripComponent(global::System.Collections.Generic.List<global::PackingList.Models.TripComponent> obj, int phase)
+            private void Update_vm_TripComponent(global::System.Collections.Generic.List<global::PackingList.Models.Trip> obj, int phase)
             {
                 if((phase & ((1 << 0) | NOT_PHASED )) != 0)
                 {

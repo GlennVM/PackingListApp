@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-08-28T14:17:04.893</Modified>
+      <Modified>2016-08-29T15:17:20.569</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -70,7 +70,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\bin\x86\Debug\Core\entrypoint\PackingList.exe">
       <PackagePath>entrypoint\PackingList.exe</PackagePath>
-      <Modified>2016-08-28T14:17:04.396</Modified>
+      <Modified>2016-08-29T15:17:16.035</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\bin\x86\Debug\Core\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -96,9 +96,13 @@
       <PackagePath>Microsoft.Win32.Primitives.dll</PackagePath>
       <Modified>2015-10-28T13:13:02.229</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\bin\x86\Debug\Core\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+      <Modified>2016-08-29T14:51:02.421</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\bin\x86\Debug\Core\PackingList.exe">
       <PackagePath>PackingList.exe</PackagePath>
-      <Modified>2016-08-28T14:17:04.890</Modified>
+      <Modified>2016-08-29T15:17:20.566</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\bin\x86\Debug\Core\PackingList.xr.xml">
       <PackagePath>PackingList.xr.xml</PackagePath>
@@ -110,7 +114,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-08-28T14:10:24.185</Modified>
+      <Modified>2016-08-29T15:17:17.635</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\bin\x86\Debug\Core\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>
@@ -251,6 +255,18 @@
     <AppxPackagedFile Include="C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\bin\x86\Debug\Core\System.Net.Http.dll">
       <PackagePath>System.Net.Http.dll</PackagePath>
       <Modified>2015-10-28T13:13:17.421</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\bin\x86\Debug\Core\System.Net.Http.Extensions.dll">
+      <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
+      <Modified>2016-08-29T13:56:11.684</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\bin\x86\Debug\Core\System.Net.Http.Formatting.dll">
+      <PackagePath>System.Net.Http.Formatting.dll</PackagePath>
+      <Modified>2016-08-29T08:12:32.136</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\bin\x86\Debug\Core\System.Net.Http.Primitives.dll">
+      <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
+      <Modified>2016-08-29T13:56:11.664</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\bin\x86\Debug\Core\System.Net.Http.Rtc.dll">
       <PackagePath>System.Net.Http.Rtc.dll</PackagePath>
@@ -510,7 +526,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glenn\Desktop\PackingListApp\PackingList\PackingList\bin\x86\Debug\Core\WinMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
-      <Modified>2016-08-27T09:10:23.525</Modified>
+      <Modified>2016-08-13T16:32:08.141</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

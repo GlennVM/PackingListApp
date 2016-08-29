@@ -10,17 +10,17 @@ namespace PackingList.Models
     {
         public string Title { get; set; }
 
-        public IList<TripComponent> items { get; set; }
-        public IList<TripComponent> tasks { get; set; }
+        public IList<Item> items { get; set; }
+        public IList<Task> tasks { get; set; }
 
        // IList<TripComponent> items = new List<TripComponent>();
         
-        public override void Add(TripComponent t)
+        public void Add(Item t)
         {
             items.Add(t);
         }
 
-        public override void Remove(TripComponent t)
+        public void Remove(Item t)
         {
             items.Remove(t);
         }
