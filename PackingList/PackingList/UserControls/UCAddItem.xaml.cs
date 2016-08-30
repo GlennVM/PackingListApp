@@ -43,6 +43,7 @@ namespace PackingList.UserControls
             middel.Children.Clear();
             var myControl = new PackingList.UserControls.UCItems(selectedTrip, middel, right, vm);
             middel.Children.Add(myControl);
+            vm.saveChanges();
         }
     }
 }

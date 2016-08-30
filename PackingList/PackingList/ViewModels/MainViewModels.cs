@@ -54,11 +54,13 @@ namespace PackingList.ViewModels
         public void addItemToDictionary(Item item)
         {
             ItemDictionary.Add(item);
+            saveChanges();
         }
 
         public void addTrip(Trip trip)
         {
             TripComponent.Add(trip);
+            saveChanges();
         }
 
         public async void saveChanges()
@@ -72,9 +74,9 @@ namespace PackingList.ViewModels
                 var itemAsJson = JsonConvert.SerializeObject(selectedUser);
                 var content = new StringContent(itemAsJson);
                 content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-
+                string subUrl = "api/user/" + selectedUser.UserId;
                 // New code:
-                HttpResponseMessage response = await client.PutAsync("api/user/1", content);
+                HttpResponseMessage response = await client.PutAsync(subUrl, content);
                 if (response.IsSuccessStatusCode)
                 {
                     //var jsonAsString = await response.Content.ReadAsStringAsync();

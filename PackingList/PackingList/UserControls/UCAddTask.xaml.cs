@@ -41,6 +41,7 @@ namespace PackingList.UserControls
             var myControl = new PackingList.UserControls.UCTasks(selectedTrip, middel, right, vm);
             right.Children.Clear();
             right.Children.Add(myControl);
+            vm.saveChanges();
         }
     }
 }
