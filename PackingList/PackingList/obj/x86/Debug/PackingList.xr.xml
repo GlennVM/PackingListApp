@@ -43,6 +43,7 @@
       <RootProperty Name="Background" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Tag" />
       <RootProperty Name="Name" />
       <RootProperty Name="BorderBrush" />
       <RootEvent Name="Click" />
@@ -67,6 +68,8 @@
     <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
       <RootProperty Name="Background" />
       <RootProperty Name="Children" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
       <RootMethod Name="GetRightOf" />
       <RootMethod Name="SetRightOf" />
       <RootMethod Name="GetBelow" />

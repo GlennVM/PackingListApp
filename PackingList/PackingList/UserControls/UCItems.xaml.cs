@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Tweetinvi;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -55,6 +56,14 @@ namespace PackingList.UserControls
             {
                 updated.Checked = false;
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button but = (Button)sender;
+            string prod = but.Tag.ToString();
+
+            Tweet.PublishTweet("Kan iemand me " + prod + " lenen? #dtv");
         }
     }
 }

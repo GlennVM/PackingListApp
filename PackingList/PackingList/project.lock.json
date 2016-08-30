@@ -3,6 +3,14 @@
   "version": 1,
   "targets": {
     "UAP,Version=v10.0": {
+      "Autofac/3.5.2": {
+        "compile": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Autofac.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Autofac.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -46,7 +54,7 @@
           "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.dll": {}
         }
       },
-      "Microsoft.Bcl/1.1.9": {
+      "Microsoft.Bcl/1.1.10": {
         "dependencies": {
           "Microsoft.Bcl.Build": "[1.0.14, )"
         },
@@ -57,7 +65,20 @@
           "lib/win8/_._": {}
         }
       },
-      "Microsoft.Bcl.Build/1.0.14": {},
+      "Microsoft.Bcl.Async/1.0.168": {
+        "dependencies": {
+          "Microsoft.Bcl": "[1.1.8, )"
+        },
+        "compile": {
+          "lib/win8/Microsoft.Threading.Tasks.dll": {},
+          "lib/win8/Microsoft.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/win8/Microsoft.Threading.Tasks.dll": {},
+          "lib/win8/Microsoft.Threading.Tasks.Extensions.dll": {}
+        }
+      },
+      "Microsoft.Bcl.Build/1.0.21": {},
       "Microsoft.CSharp/4.0.0": {
         "dependencies": {
           "System.Collections": "[4.0.10, )",
@@ -84,9 +105,9 @@
           "lib/netcore50/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Net.Http/2.2.22": {
+      "Microsoft.Net.Http/2.2.29": {
         "dependencies": {
-          "Microsoft.Bcl": "[1.1.9, )",
+          "Microsoft.Bcl": "[1.1.10, )",
           "Microsoft.Bcl.Build": "[1.0.14, )"
         },
         "compile": {
@@ -1612,9 +1633,48 @@
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "TweetinviAPI/1.0.0": {
+        "dependencies": {
+          "Autofac": "[3.5.2, )",
+          "Microsoft.Bcl.Async": "[1.0.168, )",
+          "Microsoft.Bcl.Build": "[1.0.21, )",
+          "Microsoft.Net.Http": "[2.2.29, )",
+          "Newtonsoft.Json": "[9.0.1, )"
+        },
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Controllers.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Core.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Credentials.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Factories.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Logic.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Security.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Streams.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.WebLogic.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Controllers.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Core.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Credentials.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Factories.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Logic.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Security.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Streams.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.WebLogic.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0/win10-arm": {
+      "Autofac/3.5.2": {
+        "compile": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Autofac.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Autofac.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -1658,7 +1718,7 @@
           "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.dll": {}
         }
       },
-      "Microsoft.Bcl/1.1.9": {
+      "Microsoft.Bcl/1.1.10": {
         "dependencies": {
           "Microsoft.Bcl.Build": "[1.0.14, )"
         },
@@ -1669,7 +1729,20 @@
           "lib/win8/_._": {}
         }
       },
-      "Microsoft.Bcl.Build/1.0.14": {},
+      "Microsoft.Bcl.Async/1.0.168": {
+        "dependencies": {
+          "Microsoft.Bcl": "[1.1.8, )"
+        },
+        "compile": {
+          "lib/win8/Microsoft.Threading.Tasks.dll": {},
+          "lib/win8/Microsoft.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/win8/Microsoft.Threading.Tasks.dll": {},
+          "lib/win8/Microsoft.Threading.Tasks.Extensions.dll": {}
+        }
+      },
+      "Microsoft.Bcl.Build/1.0.21": {},
       "Microsoft.CSharp/4.0.0": {
         "dependencies": {
           "System.Collections": "[4.0.10, )",
@@ -1696,9 +1769,9 @@
           "lib/netcore50/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Net.Http/2.2.22": {
+      "Microsoft.Net.Http/2.2.29": {
         "dependencies": {
-          "Microsoft.Bcl": "[1.1.9, )",
+          "Microsoft.Bcl": "[1.1.10, )",
           "Microsoft.Bcl.Build": "[1.0.14, )"
         },
         "compile": {
@@ -3314,9 +3387,48 @@
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "TweetinviAPI/1.0.0": {
+        "dependencies": {
+          "Autofac": "[3.5.2, )",
+          "Microsoft.Bcl.Async": "[1.0.168, )",
+          "Microsoft.Bcl.Build": "[1.0.21, )",
+          "Microsoft.Net.Http": "[2.2.29, )",
+          "Newtonsoft.Json": "[9.0.1, )"
+        },
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Controllers.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Core.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Credentials.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Factories.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Logic.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Security.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Streams.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.WebLogic.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Controllers.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Core.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Credentials.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Factories.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Logic.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Security.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Streams.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.WebLogic.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0/win10-arm-aot": {
+      "Autofac/3.5.2": {
+        "compile": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Autofac.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Autofac.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -3360,7 +3472,7 @@
           "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.dll": {}
         }
       },
-      "Microsoft.Bcl/1.1.9": {
+      "Microsoft.Bcl/1.1.10": {
         "dependencies": {
           "Microsoft.Bcl.Build": "[1.0.14, )"
         },
@@ -3371,7 +3483,20 @@
           "lib/win8/_._": {}
         }
       },
-      "Microsoft.Bcl.Build/1.0.14": {},
+      "Microsoft.Bcl.Async/1.0.168": {
+        "dependencies": {
+          "Microsoft.Bcl": "[1.1.8, )"
+        },
+        "compile": {
+          "lib/win8/Microsoft.Threading.Tasks.dll": {},
+          "lib/win8/Microsoft.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/win8/Microsoft.Threading.Tasks.dll": {},
+          "lib/win8/Microsoft.Threading.Tasks.Extensions.dll": {}
+        }
+      },
+      "Microsoft.Bcl.Build/1.0.21": {},
       "Microsoft.CSharp/4.0.0": {
         "dependencies": {
           "System.Collections": "[4.0.10, )",
@@ -3398,9 +3523,9 @@
           "lib/netcore50/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Net.Http/2.2.22": {
+      "Microsoft.Net.Http/2.2.29": {
         "dependencies": {
-          "Microsoft.Bcl": "[1.1.9, )",
+          "Microsoft.Bcl": "[1.1.10, )",
           "Microsoft.Bcl.Build": "[1.0.14, )"
         },
         "compile": {
@@ -4988,9 +5113,48 @@
         "runtime": {
           "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "TweetinviAPI/1.0.0": {
+        "dependencies": {
+          "Autofac": "[3.5.2, )",
+          "Microsoft.Bcl.Async": "[1.0.168, )",
+          "Microsoft.Bcl.Build": "[1.0.21, )",
+          "Microsoft.Net.Http": "[2.2.29, )",
+          "Newtonsoft.Json": "[9.0.1, )"
+        },
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Controllers.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Core.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Credentials.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Factories.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Logic.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Security.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Streams.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.WebLogic.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Controllers.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Core.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Credentials.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Factories.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Logic.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Security.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Streams.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.WebLogic.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0/win10-x64": {
+      "Autofac/3.5.2": {
+        "compile": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Autofac.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Autofac.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -5034,7 +5198,7 @@
           "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.dll": {}
         }
       },
-      "Microsoft.Bcl/1.1.9": {
+      "Microsoft.Bcl/1.1.10": {
         "dependencies": {
           "Microsoft.Bcl.Build": "[1.0.14, )"
         },
@@ -5045,7 +5209,20 @@
           "lib/win8/_._": {}
         }
       },
-      "Microsoft.Bcl.Build/1.0.14": {},
+      "Microsoft.Bcl.Async/1.0.168": {
+        "dependencies": {
+          "Microsoft.Bcl": "[1.1.8, )"
+        },
+        "compile": {
+          "lib/win8/Microsoft.Threading.Tasks.dll": {},
+          "lib/win8/Microsoft.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/win8/Microsoft.Threading.Tasks.dll": {},
+          "lib/win8/Microsoft.Threading.Tasks.Extensions.dll": {}
+        }
+      },
+      "Microsoft.Bcl.Build/1.0.21": {},
       "Microsoft.CSharp/4.0.0": {
         "dependencies": {
           "System.Collections": "[4.0.10, )",
@@ -5072,9 +5249,9 @@
           "lib/netcore50/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Net.Http/2.2.22": {
+      "Microsoft.Net.Http/2.2.29": {
         "dependencies": {
-          "Microsoft.Bcl": "[1.1.9, )",
+          "Microsoft.Bcl": "[1.1.10, )",
           "Microsoft.Bcl.Build": "[1.0.14, )"
         },
         "compile": {
@@ -6695,9 +6872,48 @@
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "TweetinviAPI/1.0.0": {
+        "dependencies": {
+          "Autofac": "[3.5.2, )",
+          "Microsoft.Bcl.Async": "[1.0.168, )",
+          "Microsoft.Bcl.Build": "[1.0.21, )",
+          "Microsoft.Net.Http": "[2.2.29, )",
+          "Newtonsoft.Json": "[9.0.1, )"
+        },
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Controllers.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Core.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Credentials.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Factories.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Logic.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Security.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Streams.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.WebLogic.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Controllers.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Core.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Credentials.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Factories.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Logic.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Security.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Streams.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.WebLogic.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0/win10-x64-aot": {
+      "Autofac/3.5.2": {
+        "compile": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Autofac.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Autofac.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -6741,7 +6957,7 @@
           "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.dll": {}
         }
       },
-      "Microsoft.Bcl/1.1.9": {
+      "Microsoft.Bcl/1.1.10": {
         "dependencies": {
           "Microsoft.Bcl.Build": "[1.0.14, )"
         },
@@ -6752,7 +6968,20 @@
           "lib/win8/_._": {}
         }
       },
-      "Microsoft.Bcl.Build/1.0.14": {},
+      "Microsoft.Bcl.Async/1.0.168": {
+        "dependencies": {
+          "Microsoft.Bcl": "[1.1.8, )"
+        },
+        "compile": {
+          "lib/win8/Microsoft.Threading.Tasks.dll": {},
+          "lib/win8/Microsoft.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/win8/Microsoft.Threading.Tasks.dll": {},
+          "lib/win8/Microsoft.Threading.Tasks.Extensions.dll": {}
+        }
+      },
+      "Microsoft.Bcl.Build/1.0.21": {},
       "Microsoft.CSharp/4.0.0": {
         "dependencies": {
           "System.Collections": "[4.0.10, )",
@@ -6779,9 +7008,9 @@
           "lib/netcore50/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Net.Http/2.2.22": {
+      "Microsoft.Net.Http/2.2.29": {
         "dependencies": {
-          "Microsoft.Bcl": "[1.1.9, )",
+          "Microsoft.Bcl": "[1.1.10, )",
           "Microsoft.Bcl.Build": "[1.0.14, )"
         },
         "compile": {
@@ -8369,9 +8598,48 @@
         "runtime": {
           "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "TweetinviAPI/1.0.0": {
+        "dependencies": {
+          "Autofac": "[3.5.2, )",
+          "Microsoft.Bcl.Async": "[1.0.168, )",
+          "Microsoft.Bcl.Build": "[1.0.21, )",
+          "Microsoft.Net.Http": "[2.2.29, )",
+          "Newtonsoft.Json": "[9.0.1, )"
+        },
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Controllers.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Core.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Credentials.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Factories.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Logic.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Security.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Streams.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.WebLogic.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Controllers.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Core.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Credentials.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Factories.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Logic.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Security.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Streams.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.WebLogic.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0/win10-x86": {
+      "Autofac/3.5.2": {
+        "compile": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Autofac.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Autofac.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -8415,7 +8683,7 @@
           "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.dll": {}
         }
       },
-      "Microsoft.Bcl/1.1.9": {
+      "Microsoft.Bcl/1.1.10": {
         "dependencies": {
           "Microsoft.Bcl.Build": "[1.0.14, )"
         },
@@ -8426,7 +8694,20 @@
           "lib/win8/_._": {}
         }
       },
-      "Microsoft.Bcl.Build/1.0.14": {},
+      "Microsoft.Bcl.Async/1.0.168": {
+        "dependencies": {
+          "Microsoft.Bcl": "[1.1.8, )"
+        },
+        "compile": {
+          "lib/win8/Microsoft.Threading.Tasks.dll": {},
+          "lib/win8/Microsoft.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/win8/Microsoft.Threading.Tasks.dll": {},
+          "lib/win8/Microsoft.Threading.Tasks.Extensions.dll": {}
+        }
+      },
+      "Microsoft.Bcl.Build/1.0.21": {},
       "Microsoft.CSharp/4.0.0": {
         "dependencies": {
           "System.Collections": "[4.0.10, )",
@@ -8453,9 +8734,9 @@
           "lib/netcore50/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Net.Http/2.2.22": {
+      "Microsoft.Net.Http/2.2.29": {
         "dependencies": {
-          "Microsoft.Bcl": "[1.1.9, )",
+          "Microsoft.Bcl": "[1.1.10, )",
           "Microsoft.Bcl.Build": "[1.0.14, )"
         },
         "compile": {
@@ -10076,9 +10357,48 @@
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "TweetinviAPI/1.0.0": {
+        "dependencies": {
+          "Autofac": "[3.5.2, )",
+          "Microsoft.Bcl.Async": "[1.0.168, )",
+          "Microsoft.Bcl.Build": "[1.0.21, )",
+          "Microsoft.Net.Http": "[2.2.29, )",
+          "Newtonsoft.Json": "[9.0.1, )"
+        },
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Controllers.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Core.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Credentials.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Factories.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Logic.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Security.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Streams.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.WebLogic.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Controllers.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Core.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Credentials.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Factories.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Logic.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Security.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Streams.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.WebLogic.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0/win10-x86-aot": {
+      "Autofac/3.5.2": {
+        "compile": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Autofac.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Autofac.dll": {}
+        }
+      },
       "Microsoft.ApplicationInsights/1.0.0": {
         "compile": {
           "lib/portable-win81+wpa81/Microsoft.ApplicationInsights.dll": {}
@@ -10122,7 +10442,7 @@
           "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.dll": {}
         }
       },
-      "Microsoft.Bcl/1.1.9": {
+      "Microsoft.Bcl/1.1.10": {
         "dependencies": {
           "Microsoft.Bcl.Build": "[1.0.14, )"
         },
@@ -10133,7 +10453,20 @@
           "lib/win8/_._": {}
         }
       },
-      "Microsoft.Bcl.Build/1.0.14": {},
+      "Microsoft.Bcl.Async/1.0.168": {
+        "dependencies": {
+          "Microsoft.Bcl": "[1.1.8, )"
+        },
+        "compile": {
+          "lib/win8/Microsoft.Threading.Tasks.dll": {},
+          "lib/win8/Microsoft.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/win8/Microsoft.Threading.Tasks.dll": {},
+          "lib/win8/Microsoft.Threading.Tasks.Extensions.dll": {}
+        }
+      },
+      "Microsoft.Bcl.Build/1.0.21": {},
       "Microsoft.CSharp/4.0.0": {
         "dependencies": {
           "System.Collections": "[4.0.10, )",
@@ -10160,9 +10493,9 @@
           "lib/netcore50/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Net.Http/2.2.22": {
+      "Microsoft.Net.Http/2.2.29": {
         "dependencies": {
-          "Microsoft.Bcl": "[1.1.9, )",
+          "Microsoft.Bcl": "[1.1.10, )",
           "Microsoft.Bcl.Build": "[1.0.14, )"
         },
         "compile": {
@@ -11750,10 +12083,55 @@
         "runtime": {
           "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "TweetinviAPI/1.0.0": {
+        "dependencies": {
+          "Autofac": "[3.5.2, )",
+          "Microsoft.Bcl.Async": "[1.0.168, )",
+          "Microsoft.Bcl.Build": "[1.0.21, )",
+          "Microsoft.Net.Http": "[2.2.29, )",
+          "Newtonsoft.Json": "[9.0.1, )"
+        },
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Controllers.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Core.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Credentials.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Factories.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Logic.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Security.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Streams.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.WebLogic.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Controllers.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Core.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Credentials.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Factories.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Logic.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Security.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Streams.dll": {},
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.WebLogic.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "Autofac/3.5.2": {
+      "sha512": "pGR5LjY8T/16x6SkJNd7u6EjQnE4C7JS0BZJ7Yl7pt313gIUZ/2ZnPSOIM5eaIA7ArxaudlyyLvAT4ayX5UJ/A==",
+      "type": "Package",
+      "files": [
+        "[Content_Types].xml",
+        "_rels/.rels",
+        "Autofac.nuspec",
+        "lib/net40/Autofac.dll",
+        "lib/net40/Autofac.xml",
+        "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Autofac.dll",
+        "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Autofac.xml",
+        "package/services/metadata/core-properties/14b288cae4b6435c88f25cef31d271e1.psmdcp"
+      ]
+    },
     "Microsoft.ApplicationInsights/1.0.0": {
       "sha512": "HZ47/thX57SOuIivSvIbsR6L9CCb/Yt3IyB2i4KHmmNlf3DO+lqFwWIKDdbDNWKX+qh0Rg20/JSMPK0dwUsYYw==",
       "type": "Package",
@@ -11789,7 +12167,7 @@
       ]
     },
     "Microsoft.ApplicationInsights.WindowsApps/1.0.0": {
-      "sha512": "NvBQnFeiFd0O1QdBz06UGApD7zn7ztVi7qO18IsM3EjiXRNgfrEBXB+azNm8XqLY8xGFAqh3HAuSd/wHZMe0XA==",
+      "sha512": "fNCAjIwvbTV+G0dT14bgM5tptsqeSaKQaCrlq7QknOq1Xdm8ZmgsDYddMgXkvykyKLjWyU6fKuOpj6fsQJy+wQ==",
       "type": "Package",
       "files": [
         "[Content_Types].xml",
@@ -11818,25 +12196,12 @@
         "package/services/metadata/core-properties/912f593b0a6b453a8eaeaa06c571a1ae.psmdcp"
       ]
     },
-    "Microsoft.Bcl/1.1.9": {
-      "sha512": "USQ55innJy8K+tAXvVa1O8dUTp2s7pmJ5cJj6Tl02HtGc2xBDj0P2QH5620HbGXIWKWYhydoeQF8Rm/JRDBGhw==",
+    "Microsoft.Bcl/1.1.10": {
+      "sha512": "+tTqoh/M1pyL8El3qLy30EcwnAtyvFoDZJtdG9Cbg/WdFbh4N8kyrq198XHuEL7lnJbeD0DRO8jcX5IIOh05cQ==",
       "type": "Package",
       "files": [
         "[Content_Types].xml",
         "_rels/.rels",
-        "content/monoandroid/_._",
-        "content/monotouch/_._",
-        "content/net45/_._",
-        "content/portable-net45+win8+wp8+wpa81/_._",
-        "content/portable-net45+win8+wpa81/_._",
-        "content/portable-net451+win81/_._",
-        "content/portable-net451+win81+wpa81/_._",
-        "content/portable-win81+wp81+wpa81/_._",
-        "content/sl4/_._",
-        "content/sl5/_._",
-        "content/win8/_._",
-        "content/wp8/_._",
-        "content/wpa81/_._",
         "lib/monoandroid/_._",
         "lib/monotouch/_._",
         "lib/net40/ensureRedirect.xml",
@@ -11916,29 +12281,78 @@
         "lib/win8/_._",
         "lib/wp8/_._",
         "lib/wpa81/_._",
+        "lib/Xamarin.iOS10/_._",
         "License-Stable.rtf",
         "Microsoft.Bcl.nuspec",
-        "package/services/metadata/core-properties/a2c2e4aac469425ea858153a6ad602c0.psmdcp"
+        "package/services/metadata/core-properties/b43ef6ce7de9447f9f8b39e2e41a185e.psmdcp"
       ]
     },
-    "Microsoft.Bcl.Build/1.0.14": {
-      "sha512": "cDLKSvNvRa519hplsbSoYqO69TjdDIhfjtKUM0g20/nVROoWsGav9KCI9HtnGjLmdV1+TcUUDhbotcllibjPEA==",
+    "Microsoft.Bcl.Async/1.0.168": {
+      "sha512": "tUNC02eBwDKpGre0BcNIvblLv1q0Q3DnS/vtkRHj2FE1sXwt386HAudztyl5C0U88hllrqHDvtlz8bK0Y8cHDA==",
       "type": "Package",
       "files": [
         "[Content_Types].xml",
         "_rels/.rels",
-        "content/net40/_._",
-        "content/netcore45/_._",
-        "content/portable-net40+win8+sl4+wp71+wpa81/_._",
-        "content/sl4/_._",
-        "content/sl4-windowsphone71/_._",
+        "lib/net40/Microsoft.Threading.Tasks.dll",
+        "lib/net40/Microsoft.Threading.Tasks.Extensions.Desktop.dll",
+        "lib/net40/Microsoft.Threading.Tasks.Extensions.Desktop.xml",
+        "lib/net40/Microsoft.Threading.Tasks.Extensions.dll",
+        "lib/net40/Microsoft.Threading.Tasks.Extensions.xml",
+        "lib/net40/Microsoft.Threading.Tasks.xml",
+        "lib/portable-net40+sl4+win8+wp71+wpa81/Microsoft.Threading.Tasks.dll",
+        "lib/portable-net40+sl4+win8+wp71+wpa81/Microsoft.Threading.Tasks.Extensions.dll",
+        "lib/portable-net40+sl4+win8+wp71+wpa81/Microsoft.Threading.Tasks.Extensions.xml",
+        "lib/portable-net40+sl4+win8+wp71+wpa81/Microsoft.Threading.Tasks.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Microsoft.Threading.Tasks.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Microsoft.Threading.Tasks.Extensions.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Microsoft.Threading.Tasks.Extensions.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Microsoft.Threading.Tasks.xml",
+        "lib/portable-net45+win8+wpa81/Microsoft.Threading.Tasks.dll",
+        "lib/portable-net45+win8+wpa81/Microsoft.Threading.Tasks.Extensions.dll",
+        "lib/portable-net45+win8+wpa81/Microsoft.Threading.Tasks.Extensions.xml",
+        "lib/portable-net45+win8+wpa81/Microsoft.Threading.Tasks.xml",
+        "lib/sl4/Microsoft.Threading.Tasks.dll",
+        "lib/sl4/Microsoft.Threading.Tasks.Extensions.dll",
+        "lib/sl4/Microsoft.Threading.Tasks.Extensions.Silverlight.dll",
+        "lib/sl4/Microsoft.Threading.Tasks.Extensions.Silverlight.xml",
+        "lib/sl4/Microsoft.Threading.Tasks.Extensions.xml",
+        "lib/sl4/Microsoft.Threading.Tasks.xml",
+        "lib/sl4-windowsphone71/Microsoft.Threading.Tasks.dll",
+        "lib/sl4-windowsphone71/Microsoft.Threading.Tasks.Extensions.dll",
+        "lib/sl4-windowsphone71/Microsoft.Threading.Tasks.Extensions.Phone.dll",
+        "lib/sl4-windowsphone71/Microsoft.Threading.Tasks.Extensions.Phone.xml",
+        "lib/sl4-windowsphone71/Microsoft.Threading.Tasks.Extensions.xml",
+        "lib/sl4-windowsphone71/Microsoft.Threading.Tasks.xml",
+        "lib/win8/Microsoft.Threading.Tasks.dll",
+        "lib/win8/Microsoft.Threading.Tasks.Extensions.dll",
+        "lib/win8/Microsoft.Threading.Tasks.Extensions.xml",
+        "lib/win8/Microsoft.Threading.Tasks.xml",
+        "lib/wp8/Microsoft.Threading.Tasks.dll",
+        "lib/wp8/Microsoft.Threading.Tasks.Extensions.dll",
+        "lib/wp8/Microsoft.Threading.Tasks.Extensions.Phone.dll",
+        "lib/wp8/Microsoft.Threading.Tasks.Extensions.Phone.xml",
+        "lib/wp8/Microsoft.Threading.Tasks.Extensions.xml",
+        "lib/wp8/Microsoft.Threading.Tasks.xml",
+        "lib/wpa81/Microsoft.Threading.Tasks.dll",
+        "lib/wpa81/Microsoft.Threading.Tasks.Extensions.dll",
+        "lib/wpa81/Microsoft.Threading.Tasks.Extensions.xml",
+        "lib/wpa81/Microsoft.Threading.Tasks.xml",
+        "License-Stable.rtf",
+        "Microsoft.Bcl.Async.nuspec",
+        "package/services/metadata/core-properties/50bdd3f20b56404c906a59d1f654457f.psmdcp"
+      ]
+    },
+    "Microsoft.Bcl.Build/1.0.21": {
+      "sha512": "sgHu4mIt0+NVGyI12Bj4hLPypNK55UOH+ologj2LqDCjxq3EbIxe/uAtHjY+fEwbE1dtsAHG8SXHf+V/EYbKTg==",
+      "type": "Package",
+      "files": [
+        "[Content_Types].xml",
+        "_rels/.rels",
+        "build/Microsoft.Bcl.Build.targets",
+        "build/Microsoft.Bcl.Build.Tasks.dll",
         "License-Stable.rtf",
         "Microsoft.Bcl.Build.nuspec",
-        "package/services/metadata/core-properties/ded9cfb683144eaba586f13af4ae979c.psmdcp",
-        "tools/Install.ps1",
-        "tools/Microsoft.Bcl.Build.targets",
-        "tools/Microsoft.Bcl.Build.Tasks.dll",
-        "tools/Uninstall.ps1"
+        "package/services/metadata/core-properties/642092c96f444452801a3d9f187d628b.psmdcp"
       ]
     },
     "Microsoft.CSharp/4.0.0": {
@@ -11982,8 +12396,8 @@
         "ref/xamarinmac20/_._"
       ]
     },
-    "Microsoft.Net.Http/2.2.22": {
-      "sha512": "bqVLJ2UimlAEs2bn3y28lB1pmFRxuysv9pFyB0A86WEMYGYTfDyfjAGjm0fiaSRjlMNU1jVnp8Mxt8qe4OmpXQ==",
+    "Microsoft.Net.Http/2.2.29": {
+      "sha512": "fc4CPEewJ30Xgal+fSq1lYIBt582A7eKlAL7O4HXiYAiTp2VTnA4osSvk7T2n8aS4xTCPVJusQk3yKLT0XSpkg==",
       "type": "Package",
       "files": [
         "[Content_Types].xml",
@@ -12041,9 +12455,13 @@
         "lib/wpa81/System.Net.Http.Extensions.XML",
         "lib/wpa81/System.Net.Http.Primitives.dll",
         "lib/wpa81/System.Net.Http.Primitives.xml",
+        "lib/Xamarin.iOS10/System.Net.Http.Extensions.dll",
+        "lib/Xamarin.iOS10/System.Net.Http.Extensions.XML",
+        "lib/Xamarin.iOS10/System.Net.Http.Primitives.dll",
+        "lib/Xamarin.iOS10/System.Net.Http.Primitives.xml",
         "License-Stable.rtf",
         "Microsoft.Net.Http.nuspec",
-        "package/services/metadata/core-properties/4bcd5cfc1347448983b7f3ddb3d6d517.psmdcp"
+        "package/services/metadata/core-properties/9ad4325e7ab9496288f2be824bbc6161.psmdcp"
       ]
     },
     "Microsoft.NETCore/5.0.0": {
@@ -15377,6 +15795,30 @@
         "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll",
         "System.Xml.XmlSerializer.nuspec"
       ]
+    },
+    "TweetinviAPI/1.0.0": {
+      "sha512": "dold6pIupT7LoOAKZHDy8+3HnA1zyp92HgBAb2zefRmT8e1HMe9FSlDsobwxvIDWghs9N0rQH7OzIQP1Vk+MyA==",
+      "type": "Package",
+      "files": [
+        "[Content_Types].xml",
+        "_rels/.rels",
+        "lib/net40/Tweetinvi.dll",
+        "lib/net45/Tweetinvi.dll",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Tweetinvi.dll",
+        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Controllers.dll",
+        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Core.dll",
+        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Credentials.dll",
+        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.dll",
+        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Factories.dll",
+        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Logic.dll",
+        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Security.dll",
+        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.Streams.dll",
+        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Tweetinvi.WebLogic.dll",
+        "package/services/metadata/core-properties/0415384cf69c4bb9a81f97966edd5d07.psmdcp",
+        "tools/Cheatsheet.cs",
+        "tools/install.ps1",
+        "TweetinviAPI.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -15386,7 +15828,8 @@
       "Microsoft.ApplicationInsights.WindowsApps >= 1.0.0",
       "Microsoft.AspNet.WebApi.Client >= 5.2.3",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.0.0",
-      "Newtonsoft.Json >= 9.0.1"
+      "Newtonsoft.Json >= 9.0.1",
+      "TweetinviAPI >= 1.0.0"
     ],
     "UAP,Version=v10.0": []
   }

@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Tweetinvi;
+using Tweetinvi.Models;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI;
@@ -28,9 +30,13 @@ namespace PackingList
     public sealed partial class MainPage : Page
     {
         MainViewModel vm = new MainViewModel();
+
+        public static object Auth { get; private set; }
+
         public MainPage()
         {
             this.InitializeComponent();
+            InitTwitterCred();
             ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(800, 1250));
 
             if (!IsLoggedIn())
@@ -42,7 +48,14 @@ namespace PackingList
 
         private bool IsLoggedIn()
         {
-            return false;
+            return true;
+        }
+
+        private static void InitTwitterCred()
+        {
+            var creds = new TwitterCredentials("229575700-IhBnxVXAaGjf4EVq5vViattUE6tDlskcIZK6AIz8", "P5OvcBkUgOmLkjbWo35hPi52OiDbDPea8IITn8eQgnXzb", "Azhicej5KqMapjsDgoEZybvrE", "gY8ItkQMZD1y0uu9lhdmcz6olaaAULn5MMexQwlwgMOTzMQ2D5");
+            Tweetinvi.Auth.SetUserCredentials("Azhicej5KqMapjsDgoEZybvrE", "gY8ItkQMZD1y0uu9lhdmcz6olaaAULn5MMexQwlwgMOTzMQ2D5", "229575700-IhBnxVXAaGjf4EVq5vViattUE6tDlskcIZK6AIz8", "P5OvcBkUgOmLkjbWo35hPi52OiDbDPea8IITn8eQgnXzb");
+            Tweetinvi.Auth.ApplicationCredentials = creds;
         }
 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)

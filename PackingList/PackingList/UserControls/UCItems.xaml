@@ -18,18 +18,21 @@
                         <StackPanel>
                             <RelativePanel>
                             <RelativePanel x:Name="rpCheck">
-                                <CheckBox Content="{Binding Name}"  IsChecked="{Binding Checked}" Width="175" Click="CheckBox_Click">
+                                <CheckBox Content="{Binding Name}"  IsChecked="{Binding Checked}" Width="125" Click="CheckBox_Click">
                                 </CheckBox>
                             </RelativePanel>
                             <RelativePanel RelativePanel.RightOf="rpCheck" x:Name="rpCat">
                                 <TextBlock x:Name="txtCategory" Text="Category: "></TextBlock>
                                 <TextBlock Text="{Binding Category}" RelativePanel.RightOf="txtCategory" Margin="4, 0, 0, 0"></TextBlock>
                             </RelativePanel>
-                            <RelativePanel x:Name="rpAmount" RelativePanel.RightOf="rpCheck" RelativePanel.Below="rpCat">
-                                <TextBlock x:Name="txtAmount" Text="Amount: "></TextBlock>
-                                <TextBlock Text="{Binding Amount}" RelativePanel.RightOf="txtAmount" Margin="4, 0, 0, 0"></TextBlock>
-                            </RelativePanel>
-                            <Rectangle RelativePanel.Below="rpAmount" HorizontalAlignment="Stretch" Fill="#00D0FF" Height="4" Width="400" Margin="0, 10, 0, 10"/>
+                                <RelativePanel x:Name="rpAmount" RelativePanel.RightOf="rpCheck" RelativePanel.Below="rpCat" Width="135">
+                                    <TextBlock x:Name="txtAmount" Text="Amount: "></TextBlock>
+                                    <TextBlock Text="{Binding Amount}" RelativePanel.RightOf="txtAmount" Margin="4, 0, 0, 0"></TextBlock>
+                                </RelativePanel>    
+                                <RelativePanel RelativePanel.RightOf="rpAmount" Width="100" Margin="0,0,0,0">
+                                    <Button Content="Ask Twitter" Width="100" Margin="0,0,0,0" Click="Button_Click" Tag="{Binding Name}"></Button>
+                                </RelativePanel>
+                                <Rectangle RelativePanel.Below="rpAmount" HorizontalAlignment="Stretch" Fill="#00D0FF" Height="4" Width="400" Margin="0, 10, 0, 10"/>
                             </RelativePanel>
                         </StackPanel>
                     </DataTemplate>
