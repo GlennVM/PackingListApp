@@ -31,7 +31,18 @@ namespace PackingList
         public MainPage()
         {
             this.InitializeComponent();
-            ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(400, 650));
+            ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(800, 1250));
+
+            if (!IsLoggedIn())
+            {
+                var control = new UCLoginPage(tripsPanel, itemsPanel, addPanel, vm);
+                MySplitViewContent.Children.Add(control);
+            }
+        }
+
+        private bool IsLoggedIn()
+        {
+            return false;
         }
 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)

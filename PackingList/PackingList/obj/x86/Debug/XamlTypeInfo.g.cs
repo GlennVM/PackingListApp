@@ -132,7 +132,7 @@ namespace PackingList.PackingList_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[12];
+            _typeNameTable = new string[13];
             _typeNameTable[0] = "PackingList.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
@@ -142,11 +142,12 @@ namespace PackingList.PackingList_XamlTypeInfo
             _typeNameTable[6] = "PackingList.UserControls.UCAddTask";
             _typeNameTable[7] = "PackingList.UserControls.UCItemDictionary";
             _typeNameTable[8] = "PackingList.UserControls.UCItems";
-            _typeNameTable[9] = "PackingList.UserControls.UCTasks";
-            _typeNameTable[10] = "PackingList.UserControls.UCTrip";
-            _typeNameTable[11] = "PackingList.UserControls.UCTrips";
+            _typeNameTable[9] = "PackingList.UserControls.UCLoginPage";
+            _typeNameTable[10] = "PackingList.UserControls.UCTasks";
+            _typeNameTable[11] = "PackingList.UserControls.UCTrip";
+            _typeNameTable[12] = "PackingList.UserControls.UCTrips";
 
-            _typeTable = new global::System.Type[12];
+            _typeTable = new global::System.Type[13];
             _typeTable[0] = typeof(global::PackingList.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -156,9 +157,10 @@ namespace PackingList.PackingList_XamlTypeInfo
             _typeTable[6] = typeof(global::PackingList.UserControls.UCAddTask);
             _typeTable[7] = typeof(global::PackingList.UserControls.UCItemDictionary);
             _typeTable[8] = typeof(global::PackingList.UserControls.UCItems);
-            _typeTable[9] = typeof(global::PackingList.UserControls.UCTasks);
-            _typeTable[10] = typeof(global::PackingList.UserControls.UCTrip);
-            _typeTable[11] = typeof(global::PackingList.UserControls.UCTrips);
+            _typeTable[9] = typeof(global::PackingList.UserControls.UCLoginPage);
+            _typeTable[10] = typeof(global::PackingList.UserControls.UCTasks);
+            _typeTable[11] = typeof(global::PackingList.UserControls.UCTrip);
+            _typeTable[12] = typeof(global::PackingList.UserControls.UCTrips);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -258,19 +260,25 @@ namespace PackingList.PackingList_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 9:   //  PackingList.UserControls.UCTasks
+            case 9:   //  PackingList.UserControls.UCLoginPage
                 userType = new global::PackingList.PackingList_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  PackingList.UserControls.UCTrip
+            case 10:   //  PackingList.UserControls.UCTasks
                 userType = new global::PackingList.PackingList_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 11:   //  PackingList.UserControls.UCTrips
+            case 11:   //  PackingList.UserControls.UCTrip
+                userType = new global::PackingList.PackingList_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 12:   //  PackingList.UserControls.UCTrips
                 userType = new global::PackingList.PackingList_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.SetIsLocalType();
                 xamlType = userType;
