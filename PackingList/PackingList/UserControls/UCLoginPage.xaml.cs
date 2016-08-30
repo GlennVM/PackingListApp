@@ -45,7 +45,17 @@ namespace PackingList.UserControls
                         var dialog = new MessageDialog("logged in");
                         await dialog.ShowAsync();
                     }
+                    else
+                    {
+                        var dialog = new MessageDialog("Invalid userName / password");
+                        await dialog.ShowAsync();
+                    }
                 }
+            }
+            else
+            {
+                var dialog = new MessageDialog("Enter userName and password");
+                await dialog.ShowAsync();
             }
         }
 
