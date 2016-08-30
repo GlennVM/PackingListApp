@@ -46,10 +46,10 @@ namespace PackingList.ViewModels
         }
 
 
-        public async void laadItemDictionary()
-        {
-            saveChanges();
-        }
+        //public async void laadItemDictionary()
+        //{
+        //    saveChanges();
+        //}
 
         public void addItemToDictionary(Item item)
         {
@@ -63,6 +63,9 @@ namespace PackingList.ViewModels
 
         public async void saveChanges()
         {
+            selectedUser.Trips = TripComponent;
+            selectedUser.ItemDictionary = ItemDictionary;
+
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri("http://localhost:3398/");

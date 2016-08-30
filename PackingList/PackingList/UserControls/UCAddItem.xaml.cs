@@ -29,7 +29,7 @@ namespace PackingList.UserControls
         {
             this.InitializeComponent();
             this.vm = vm;
-            vm.laadItemDictionary();
+            //vm.laadItemDictionary();
             this.selectedTrip = selectedTrip;
             this.middel = middel;
             this.right = right;

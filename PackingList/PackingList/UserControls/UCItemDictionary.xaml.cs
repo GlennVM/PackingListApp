@@ -27,7 +27,7 @@ namespace PackingList.UserControls
         {
             this.InitializeComponent();
             this.vm = vm;
-            vm.laadItemDictionary();
+            //vm.laadItemDictionary();
             this.left = left;
             this.middel = middel;
         }

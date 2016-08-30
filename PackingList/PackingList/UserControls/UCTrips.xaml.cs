@@ -28,7 +28,7 @@ namespace PackingList.UserControls
         public UCTrips(Panel left, Panel itemsPanel, Panel addPanel, MainViewModel vm)
         {
             this.InitializeComponent();
-            vm.laadReizen();
+            //vm.laadReizen();
             this.vm = vm;
             this.left = left;
             this.mp = itemsPanel;

@@ -44,6 +44,7 @@ namespace PackingList
                 var control = new UCLoginPage(tripsPanel, itemsPanel, addPanel, vm);
                 MySplitViewContent.Children.Add(control);
             }
+            vm.laadReizen();
         }
 
         private bool IsLoggedIn()
@@ -69,7 +70,7 @@ namespace PackingList
             tripsPanel.Children.Clear();
             itemsPanel.Children.Clear();
             addPanel.Children.Clear();
-            vm.laadReizen();
+            //vm.laadReizen();
             var myControl = new PackingList.UserControls.UCTrips(tripsPanel, itemsPanel, addPanel, vm);
             tripsPanel.Children.Add(myControl);
         }
@@ -80,7 +81,7 @@ namespace PackingList
             tripsPanel.Children.Clear();
             itemsPanel.Children.Clear();
             addPanel.Children.Clear();
-            vm.laadItemDictionary();
+            //vm.laadItemDictionary();
             var myControl = new PackingList.UserControls.UCItemDictionary(tripsPanel, itemsPanel, vm);
             tripsPanel.Children.Add(myControl);
         }

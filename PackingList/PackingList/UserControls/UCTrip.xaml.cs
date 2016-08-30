@@ -38,6 +38,7 @@ namespace PackingList.UserControls
         {
             Trip trip = new Trip() { Title = txtTrip.Text.ToString(), items = new List<Item>(), tasks = new List<Task>() };
             vm.addTrip(trip);
+            vm.saveChanges();
             left.Children.Clear();
             var myControl = new PackingList.UserControls.UCTrips(left, middel, right, vm);
             left.Children.Add(myControl);
