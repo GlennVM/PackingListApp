@@ -30,7 +30,7 @@ namespace PackingList
     public sealed partial class MainPage : Page
     {
         MainViewModel vm = new MainViewModel();
-
+        Models.User user = new Models.User();
         public static object Auth { get; private set; }
 
         public MainPage()
@@ -49,7 +49,18 @@ namespace PackingList
 
         private bool IsLoggedIn()
         {
-            return false;
+
+            if(user != null)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        private void NavigationHelper_LoadState(object sender)
+        {
+            user = sender as Models.User;
+            
         }
 
         private static void InitTwitterCred()

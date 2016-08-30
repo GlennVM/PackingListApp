@@ -49,6 +49,9 @@ namespace PackingList.UserControls
                     {
                         var dialog = new MessageDialog("Invalid userName / password");
                         await dialog.ShowAsync();
+
+                        UserName.Text = string.Empty;
+                        PassWord.Password = string.Empty;
                     }
                 }
             }
