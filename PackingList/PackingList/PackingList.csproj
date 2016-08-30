@@ -132,6 +132,9 @@
     <Compile Include="UserControls\UCLoginPage.xaml.cs">
       <DependentUpon>UCLoginPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UCSignUp.xaml.cs">
+      <DependentUpon>UCSignUp.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UCTasks.xaml.cs">
       <DependentUpon>UCTasks.xaml</DependentUpon>
     </Compile>
@@ -193,6 +196,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\UCLoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UCSignUp.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
