@@ -1,5 +1,4 @@
-﻿using PackingList.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,24 +13,23 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
+// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace PackingList.UserControls
+namespace PackingList.Views
 {
-    public sealed partial class UCSignUp : UserControl
+    /// <summary>
+    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// </summary>
+    public sealed partial class SignInPage : Page
     {
-        private MainViewModel vm;
-        private Panel left;
-        private Panel mp;
-        private Panel ap;
-
-        public UCSignUp(Panel left, Panel itemsPanel, Panel addPanel, MainViewModel vm)
+        public SignInPage()
         {
             this.InitializeComponent();
-            this.vm = vm;
-            this.left = left;
-            this.mp = itemsPanel;
-            this.ap = addPanel;
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
         }
 
         private void Submit_Click(object sender, RoutedEventArgs e)

@@ -1,4 +1,5 @@
 ﻿using PackingList.ViewModels;
+using PackingList.Views;
 using System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -30,8 +31,8 @@ namespace PackingList.UserControls
 
         private void SignUp_Click(object sender, RoutedEventArgs e)
         {
-            var rootFrame = new Frame();
-            rootFrame.Navigate(typeof(UCSignUp));
+            var rootFrame = Window.Current.Content as Frame;
+            rootFrame.Navigate(typeof(SignInPage));
         }
     }
 }

@@ -104,7 +104,6 @@
       <RootProperty Name="Width" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="MaxLength" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="Width" />
@@ -147,14 +146,6 @@
       <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="PackingList.UserControls.UCLoginPage" />
-    <RootType FullName="Windows.UI.Xaml.Controls.RadioButton">
-      <RootProperty Name="Name" />
-      <RootProperty Name="Background" />
-      <RootProperty Name="Content" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Foreground" />
-    </RootType>
-    <RootType FullName="PackingList.UserControls.UCSignUp" />
     <RootType FullName="PackingList.UserControls.UCTasks" />
     <RootType FullName="PackingList.UserControls.UCTrip" />
     <RootType FullName="Windows.UI.Xaml.Controls.ItemsPanelTemplate">
@@ -166,5 +157,6 @@
       <RootProperty Name="ItemWidth" />
     </RootType>
     <RootType FullName="PackingList.UserControls.UCTrips" />
+    <RootType FullName="PackingList.Views.SignInPage" />
   </Roots.RootTypes>
 </Roots>

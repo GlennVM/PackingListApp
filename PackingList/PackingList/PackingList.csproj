@@ -132,9 +132,6 @@
     <Compile Include="UserControls\UCLoginPage.xaml.cs">
       <DependentUpon>UCLoginPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UCSignUp.xaml.cs">
-      <DependentUpon>UCSignUp.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\UCTasks.xaml.cs">
       <DependentUpon>UCTasks.xaml</DependentUpon>
     </Compile>
@@ -145,6 +142,9 @@
       <DependentUpon>UCTrips.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\MainViewModels.cs" />
+    <Compile Include="Views\SignInPage.xaml.cs">
+      <DependentUpon>SignInPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -199,10 +199,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\UCSignUp.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="UserControls\UCTasks.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -212,6 +208,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\UCTrips.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SignInPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
