@@ -10,7 +10,8 @@ namespace PackingList.Services
     public class DummyService
     {
         List<Trip> trips;
-        List<Item> itemDictionary; 
+        List<Item> itemDictionary;
+        List<User> users; 
         public DummyService()
         {
             List<Item> items = new List<Item>();
@@ -54,6 +55,10 @@ namespace PackingList.Services
             itemDictionary.Add(new Item() { Name = "Tandenborstel", Checked = false, Category = "Bathroom" });
             itemDictionary.Add(new Item() { Name = "Kam", Checked = false, Category = "Bathroom" });
             itemDictionary.Add(new Item() { Name = "Gel", Checked = false, Category = "Bathroom" });
+
+            users = new List<User>();
+
+            users.Add(new User() { Name = "DeanD", Password = "test123", EmailAddress = "dean.delanoye@uwp.be" });
         }
 
         public List<Trip> retrieveTrips()
@@ -64,6 +69,11 @@ namespace PackingList.Services
         public List<Item> retrieveItemDictionary()
         {
             return itemDictionary;
+        }
+
+        public List<User> retrieveUsers()
+        {
+            return users;
         }
     }
 }

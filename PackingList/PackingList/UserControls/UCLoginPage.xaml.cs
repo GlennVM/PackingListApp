@@ -1,6 +1,8 @@
-﻿using PackingList.ViewModels;
+﻿using PackingList.Services;
+using PackingList.ViewModels;
 using PackingList.Views;
 using System;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -15,6 +17,8 @@ namespace PackingList.UserControls
         private Panel mp;
         private Panel ap;
 
+        DummyService service = new DummyService();
+
         public UCLoginPage(Panel left, Panel itemsPanel, Panel addPanel, MainViewModel vm)
         {
             this.InitializeComponent();
@@ -24,9 +28,25 @@ namespace PackingList.UserControls
             this.ap = addPanel;
         }
 
-        private void Login_Click(object sender, RoutedEventArgs e)
+        private async void Login_Click(object sender, RoutedEventArgs e)
         {
+            if (UserName.Text != "" && PassWord.Password != "")
+            {
+                int temp = 0;
 
+                foreach (var userLogin in service.retrieveUsers())
+                {
+                    if (UserName.Text == userLogin.Name && PassWord.Password == userLogin.Password)
+                    {
+                        temp = 1;
+
+                        var rootFrame = Window.Current.Content as Frame;
+                        rootFrame.Navigate(typeof(MainPage),userLogin);
+                        var dialog = new MessageDialog("logged in");
+                        await dialog.ShowAsync();
+                    }
+                }
+            }
         }
 
         private void SignUp_Click(object sender, RoutedEventArgs e)

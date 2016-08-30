@@ -49,7 +49,7 @@ namespace PackingList
 
         private bool IsLoggedIn()
         {
-            return true;
+            return false;
         }
 
         private static void InitTwitterCred()
