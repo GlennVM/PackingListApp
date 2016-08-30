@@ -3,14 +3,15 @@ using PackingList.Models;
 using PackingList.Services;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.Data.Json;
-using Newtonsoft.Json;
 
 namespace PackingList.ViewModels
 {
@@ -43,11 +44,11 @@ namespace PackingList.ViewModels
                 }
             }
         }
-        
 
-        public void laadItemDictionary()
+
+        public async void laadItemDictionary()
         {
-            ItemDictionary = selectedUser.ItemDictionary;
+            saveChanges();
         }
 
         public void addItemToDictionary(Item item)
@@ -59,5 +60,28 @@ namespace PackingList.ViewModels
         {
             TripComponent.Add(trip);
         }
+
+        public async void saveChanges()
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://localhost:3398/");
+                var itemAsJson = JsonConvert.SerializeObject(selectedUser);
+                var content = new StringContent(itemAsJson);
+                content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+
+                // New code:
+                HttpResponseMessage response = await client.PutAsync("api/user/1", content);
+                if (response.IsSuccessStatusCode)
+                {
+                    //var jsonAsString = await response.Content.ReadAsStringAsync();
+                    //User output = JsonConvert.DeserializeObject<User>(jsonAsString);
+                    //selectedUser = output;
+                    //TripComponent = selectedUser.Trips;
+                    //ItemDictionary = selectedUser.ItemDictionary;
+                }
+            }
+        }
+
     }
 }
