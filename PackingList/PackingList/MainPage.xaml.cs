@@ -37,7 +37,7 @@ namespace PackingList
         {
             this.InitializeComponent();
             InitTwitterCred();
-            ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(800, 1250));
+            ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(1024, 768));
 
             if (!IsLoggedIn())
             {

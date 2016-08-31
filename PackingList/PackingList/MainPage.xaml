@@ -15,37 +15,52 @@
         <PivotItem Header="Items" />
     </Pivot>-->
 
+    <!--<Pivot Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <PivotItem Header="Trips">
+            <uc:UCTrips/>
+        </PivotItem>
+        <PivotItem Header="Items" />
+    </Pivot>-->
+
+    <!--<Pivot Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <PivotItem Header="Trips">
+            <uc:UCTrips/>
+        </PivotItem>
+        <PivotItem Header="Items" />
+    </Pivot>-->
+
     <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="150"
                Background="White" PaneBackground="#00D0FF">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="smal1024x768">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowHeight="768" MinWindowWidth="{Binding Width, ElementName=addPanel, FallbackValue=300, Mode=TwoWay}"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
         <SplitView.Pane>
             <StackPanel>
                 <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
                     Width="50" Height="50" Background="Transparent" Click="HamburgerButton_Click" />
                 <StackPanel Orientation="Horizontal">
-                    <Button x:Name="MenuButton1" FontFamily="Segoe MDL2 Assets" Content=""
+                    <Button x:Name="MenuButton1" FontFamily="Segoe MDL2 Assets" Content="&#xE128;"
                     Width="50" Height="50" Background="Transparent" Click="Loadingtrips"/>
                     <TextBlock Text="Trips" FontSize="18" VerticalAlignment="Center" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Button x:Name="MenuButton2" FontFamily="Segoe MDL2 Assets" Content=""
+                    <Button x:Name="MenuButton2" FontFamily="Segoe MDL2 Assets" Content="&#xE113;"
                         Width="50" Height="50" Background="Transparent" Click="loadingitems"/>
                     <TextBlock Text="Items" FontSize="18" VerticalAlignment="Center" />
                 </StackPanel>
             </StackPanel>
         </SplitView.Pane>
-        <SplitView.Content>
-            <Grid x:Name="MySplitViewContent">
-                <StackPanel x:Name="tripsPanel" Background="Azure" HorizontalAlignment="Left" Height="800" Margin="0,0,50,0" VerticalAlignment="Top" Width="400">
-
-                </StackPanel>
-                <StackPanel x:Name="itemsPanel" Background="Azure" HorizontalAlignment="Center" Height="800" Margin="0,0,0,0" VerticalAlignment="Top" Width="400">
-
-                </StackPanel>
-                <StackPanel x:Name="addPanel" Background="Azure" HorizontalAlignment="Right" Height="800" Margin="0,0,0,0" VerticalAlignment="Top" Width="400">
-
-                </StackPanel>
-            </Grid>
-        </SplitView.Content>
+        <Grid x:Name="MySplitViewContent">
+            <StackPanel x:Name="tripsPanel" HorizontalAlignment="Left" Height="800" Margin="0,0,50,0" VerticalAlignment="Top" Width="400" BorderThickness="2" CornerRadius="4" Background="Azure" BorderBrush="#FF00D0FF"/>
+            <StackPanel x:Name="itemsPanel" Background="Azure" HorizontalAlignment="Center" Height="800" Margin="0,0,0,0" VerticalAlignment="Top" Width="400" BorderBrush="#FF00D0FF" BorderThickness="2" CornerRadius="4"/>
+            <StackPanel x:Name="addPanel" Background="Azure" HorizontalAlignment="Right" Height="800" Margin="0,0,0,0" VerticalAlignment="Top" Width="400" BorderBrush="#FF00D0FF" BorderThickness="2" CornerRadius="4"/>
+        </Grid>
     </SplitView>
 
     <!--<Page.BottomAppBar>
