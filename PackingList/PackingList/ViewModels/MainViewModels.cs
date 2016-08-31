@@ -32,8 +32,9 @@ namespace PackingList.ViewModels
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
+                string suburl = "api/user/" + selectedUser.UserId;
                 // New code:
-                HttpResponseMessage response = await client.GetAsync("api/user/1");
+                HttpResponseMessage response = await client.GetAsync(suburl);
                 if (response.IsSuccessStatusCode)
                 {
                     var jsonAsString = await response.Content.ReadAsStringAsync();
@@ -131,7 +132,29 @@ namespace PackingList.ViewModels
                     laadReizen(output.UserId);
                 }
             }
+        }
 
+        public async void login(User user)
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://localhost:3398/");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                string suburl = "api/user/0/?name=" + user.Name + "&pass=" + user.Password;
+                // New code:
+                HttpResponseMessage response = await client.GetAsync(suburl);
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsonAsString = await response.Content.ReadAsStringAsync();
+                    User output = JsonConvert.DeserializeObject<User>(jsonAsString);
+                    laadReizen(output.UserId);
+                    //selectedUser = output;
+                    //TripComponent = selectedUser.Trips;
+                    //ItemDictionary = selectedUser.ItemDictionary;
+                }
+            }
         }
     }
 }

@@ -41,10 +41,10 @@ namespace PackingList
 
             if (!IsLoggedIn())
             {
-                var control = new UCLoginPage(tripsPanel, itemsPanel, addPanel, vm);
+                var control = new UCLoginPage(tripsPanel, itemsPanel, addPanel, MySplitViewContent, vm);
                 MySplitViewContent.Children.Add(control);
             }
-            vm.laadReizen();
+            //vm.laadReizen();
         }
 
         private bool IsLoggedIn()

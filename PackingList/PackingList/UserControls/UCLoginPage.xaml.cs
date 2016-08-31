@@ -1,4 +1,5 @@
-﻿using PackingList.Services;
+﻿using PackingList.Models;
+using PackingList.Services;
 using PackingList.ViewModels;
 using PackingList.Views;
 using System;
@@ -16,16 +17,18 @@ namespace PackingList.UserControls
         private Panel left;
         private Panel mp;
         private Panel ap;
+        private Grid mysplit;
 
         DummyService service = new DummyService();
 
-        public UCLoginPage(Panel left, Panel itemsPanel, Panel addPanel, MainViewModel vm)
+        public UCLoginPage(Panel left, Panel itemsPanel, Panel addPanel, Grid mySplitviewCont, MainViewModel vm)
         {
             this.InitializeComponent();
             this.vm = vm;
             this.left = left;
             this.mp = itemsPanel;
             this.ap = addPanel;
+            this.mysplit = mySplitviewCont;
         }
 
         private async void Login_Click(object sender, RoutedEventArgs e)
@@ -34,14 +37,27 @@ namespace PackingList.UserControls
             {
                 int temp = 0;
 
-                foreach (var userLogin in service.retrieveUsers())
+                User loginUser = new User();
+                loginUser.Name = UserName.Text.ToString();
+                loginUser.Password = PassWord.Password.ToString();
+
+                vm.login(loginUser);
+                mysplit.Children.Remove(this);
+                var dialog = new MessageDialog("logged in");
+                await dialog.ShowAsync();
+
+
+                /**foreach (var userLogin in service.retrieveUsers())
                 {
                     if (UserName.Text == userLogin.Name && PassWord.Password == userLogin.Password)
                     {
                         temp = 1;
 
-                        var rootFrame = Window.Current.Content as Frame;
-                        rootFrame.Navigate(typeof(MainPage),userLogin);
+                        //var rootFrame = Window.Current.Content as Frame;
+                        //rootFrame.Navigate(typeof(MainPage),userLogin);
+                        User loginUser = new User();
+                        
+                        vm.login();
                         var dialog = new MessageDialog("logged in");
                         await dialog.ShowAsync();
                     }
@@ -53,7 +69,7 @@ namespace PackingList.UserControls
                         UserName.Text = string.Empty;
                         PassWord.Password = string.Empty;
                     }
-                }
+                }*/
             }
             else
             {

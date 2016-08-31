@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Users\Glenn\Desktop\ExamenWindows\PackingList\PackingList\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-08-31T09:11:24.024</Modified>
+      <Modified>2016-08-31T09:55:59.223</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -74,7 +74,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glenn\Desktop\ExamenWindows\PackingList\PackingList\bin\x86\Debug\Core\entrypoint\PackingList.exe">
       <PackagePath>entrypoint\PackingList.exe</PackagePath>
-      <Modified>2016-08-31T09:11:22.964</Modified>
+      <Modified>2016-08-31T09:55:58.096</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glenn\Desktop\ExamenWindows\PackingList\PackingList\bin\x86\Debug\Core\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -114,7 +114,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glenn\Desktop\ExamenWindows\PackingList\PackingList\bin\x86\Debug\Core\PackingList.exe">
       <PackagePath>PackingList.exe</PackagePath>
-      <Modified>2016-08-31T09:11:24.022</Modified>
+      <Modified>2016-08-31T09:55:59.223</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glenn\Desktop\ExamenWindows\PackingList\PackingList\bin\x86\Debug\Core\PackingList.xr.xml">
       <PackagePath>PackingList.xr.xml</PackagePath>
@@ -126,7 +126,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glenn\Desktop\ExamenWindows\PackingList\PackingList\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-08-31T09:06:53.875</Modified>
+      <Modified>2016-08-31T09:54:21.695</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glenn\Desktop\ExamenWindows\PackingList\PackingList\bin\x86\Debug\Core\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>
