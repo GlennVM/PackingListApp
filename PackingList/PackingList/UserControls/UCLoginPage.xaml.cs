@@ -35,7 +35,6 @@ namespace PackingList.UserControls
         {
             if (UserName.Text != "" && PassWord.Password != "")
             {
-                int temp = 0;
 
                 User loginUser = new User();
                 loginUser.Name = UserName.Text.ToString();
@@ -43,7 +42,7 @@ namespace PackingList.UserControls
 
                 vm.login(loginUser);
                 mysplit.Children.Remove(this);
-                var dialog = new MessageDialog("logged in");
+                var dialog = new MessageDialog("Welcome " + loginUser.Name);
                 await dialog.ShowAsync();
 
 
