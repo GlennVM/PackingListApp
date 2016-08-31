@@ -49,18 +49,17 @@ namespace PackingList
 
         private bool IsLoggedIn()
         {
-
-            if(user != null)
+            if (user.Name == null)
             {
                 return false;
             }
             return true;
         }
 
-        private void NavigationHelper_LoadState(object sender)
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            user = sender as Models.User;
-            
+            Models.User user = (Models.User)e.Parameter;
+            base.OnNavigatedTo(e);
         }
 
         private static void InitTwitterCred()
