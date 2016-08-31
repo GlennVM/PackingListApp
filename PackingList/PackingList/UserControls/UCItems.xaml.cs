@@ -36,18 +36,28 @@ namespace PackingList.UserControls
             this.selectedTrip = selectedTrip;
 
             int counter = 0;
+            int total = 0;
 
             for(int i = 0; i < selectedTrip.items.Count; i++)
             {
                 if (selectedTrip.items[i].Checked == true)
                 {
-                    counter++;
+                    counter += selectedTrip.items[i].Amount;
                 }
+                total += selectedTrip.items[i].Amount;
             }
 
-            txtProgress.Text = counter + "/" + selectedTrip.items.Count + " Done!";
+            txtProgress.Text = counter + "/" + total + " Done!";
 
-            progressbar.Value = (counter / selectedTrip.items.Count);
+            if (selectedTrip.items.Count == 0)
+            {
+                progressbar.Value = 100;
+            } else
+            {
+                double progress = (double)counter / total;
+                progressbar.Value = progress * 100;
+            }
+            
             //base.OnNavigatedTo(e);
         }
 
