@@ -34,6 +34,18 @@ namespace PackingList.UserControls
             this.middel = middel;
             this.right = right;
             this.selectedTrip = selectedTrip;
+
+            int counter = 0;
+
+            for(int i = 0; i < selectedTrip.items.Count; i++)
+            {
+                if (selectedTrip.items[i].Checked == true)
+                {
+                    counter++;
+                }
+            }
+
+            txtProgress.Text = counter + "/" + selectedTrip.items.Count + " Done!";
             //base.OnNavigatedTo(e);
         }
 
