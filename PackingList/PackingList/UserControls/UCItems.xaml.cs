@@ -46,6 +46,8 @@ namespace PackingList.UserControls
             }
 
             txtProgress.Text = counter + "/" + selectedTrip.items.Count + " Done!";
+
+            progressbar.Value = (counter / selectedTrip.items.Count);
             //base.OnNavigatedTo(e);
         }
 

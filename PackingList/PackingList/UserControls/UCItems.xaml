@@ -13,6 +13,7 @@
         <StackPanel x:Name="trip">
             <Button Content="Add Item" Width="410" Height="100" Click="AddItem" Background="#FF0F73EC"></Button>
             <TextBlock x:Name="txtProgress" Width="410" Height="50">Dit is een textblock</TextBlock>
+            <ProgressBar Minimum="0" Maximum="100" Name="progressbar"></ProgressBar>
             <ListView Margin="10" Name="lvDataBinding" ItemsSource="{Binding items}" Background="Azure" ScrollViewer.VerticalScrollMode="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Height="500">
                 <ListView.ItemTemplate>
                     <DataTemplate>

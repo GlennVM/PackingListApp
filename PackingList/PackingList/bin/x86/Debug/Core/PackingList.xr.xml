@@ -164,6 +164,11 @@
       <RootMethod Name="SetVerticalScrollBarVisibility" />
     </RootType>
     <RootType FullName="PackingList.UserControls.UCItemDictionary" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ProgressBar">
+      <RootProperty Name="Name" />
+      <RootProperty Name="Minimum" />
+      <RootProperty Name="Maximum" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Fill" />
