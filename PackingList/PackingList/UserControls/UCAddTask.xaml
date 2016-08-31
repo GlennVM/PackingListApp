@@ -12,6 +12,6 @@
     <ListView xmlns:m="using:PackingList.Models">
         <TextBlock Text="Describe the task you want to add:"></TextBlock>
         <TextBox Name="txtTask" Width="350"></TextBox>
-        <Button x:Name="btnAdd" Content="Add" Width="350" Height="100" Background="#00D0FF" VerticalAlignment="Bottom" Margin="0,50,0,0" Click="btnAdd_Click"></Button>
+        <Button x:Name="btnAdd" Content="Add" Width="350" Height="100" Background="#FF0F73EC" VerticalAlignment="Bottom" Margin="0,50,0,0" Click="btnAdd_Click"></Button>
     </ListView>
 </UserControl>

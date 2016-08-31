@@ -12,6 +12,6 @@
     <ListView xmlns:m="using:PackingList.Models">
         <TextBlock Text="Enter the name of the trip you want to add:" Margin="0,50,0,0" VerticalAlignment="Top"></TextBlock>
         <TextBox x:Name="txtTrip" Width="350"></TextBox>
-        <Button x:Name="btnAdd" Content="Add" Width="350" Height="100" Background="#00D0FF" VerticalAlignment="Bottom" Margin="0,50,0,0" Click="btnAdd_Click"></Button>
+        <Button x:Name="btnAdd" Content="Add" Width="350" Height="100" Background="#FF0F73EC" VerticalAlignment="Bottom" Margin="0,50,0,0" Click="btnAdd_Click"></Button>
     </ListView>
 </UserControl>
