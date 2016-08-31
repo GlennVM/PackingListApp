@@ -39,6 +39,7 @@ namespace PackingList.UserControls
         {
             Item selectedItem = (Item)cmbItem.SelectedItem;
             selectedItem.Amount = int.Parse(txtAmount.Text.ToString());
+            selectedItem.ItemId = 0;
             selectedTrip.Add(selectedItem);
             middel.Children.Clear();
             var myControl = new PackingList.UserControls.UCItems(selectedTrip, middel, right, vm);
