@@ -8,6 +8,8 @@ namespace PackingList.Models
 {
     public class Trip : TripComponent
     {
+        public int TripId { get; set; }
+
         public string Title { get; set; }
 
         public IList<Item> items { get; set; }

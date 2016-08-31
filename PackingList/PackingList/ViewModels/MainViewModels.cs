@@ -79,6 +79,7 @@ namespace PackingList.ViewModels
                 HttpResponseMessage response = await client.PutAsync(subUrl, content);
                 if (response.IsSuccessStatusCode)
                 {
+                    laadReizen();
                     //var jsonAsString = await response.Content.ReadAsStringAsync();
                     //User output = JsonConvert.DeserializeObject<User>(jsonAsString);
                     //selectedUser = output;
@@ -87,6 +88,5 @@ namespace PackingList.ViewModels
                 }
             }
         }
-
     }
 }

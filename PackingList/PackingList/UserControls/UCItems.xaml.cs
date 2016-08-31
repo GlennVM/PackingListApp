@@ -56,6 +56,7 @@ namespace PackingList.UserControls
             {
                 updated.Checked = false;
             }
+            vm.saveChanges();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
