@@ -12,8 +12,12 @@
     <RelativePanel Background="Azure">
         <StackPanel x:Name="trip">
             <Button Content="Add Item" Width="410" Height="100" Click="AddItem" Background="#FF0F73EC"></Button>
-            <TextBlock x:Name="txtProgress" Width="410" Height="50">Dit is een textblock</TextBlock>
-            <ProgressBar Minimum="0" Maximum="100" Name="progressbar"></ProgressBar>
+            <Border>
+                <TextBlock x:Name="txtProgress" Width="150" Height="50" Margin="5,5,0,-25" VerticalAlignment="Center" HorizontalAlignment="Center">Dit is een textblock</TextBlock>
+            </Border>
+            <ProgressBar Minimum="0" Maximum="100" Name="progressbar" Height="10" BorderThickness="0,3,3,0">
+                
+            </ProgressBar>
             <ListView Margin="10" Name="lvDataBinding" ItemsSource="{Binding items}" Background="Azure" ScrollViewer.VerticalScrollMode="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Height="500">
                 <ListView.ItemTemplate>
                     <DataTemplate>
