@@ -30,7 +30,7 @@
     </Pivot>-->
 
     <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="150"
-               Background="White" PaneBackground="#00D0FF">
+               Background="White" PaneBackground="#FF0F73EC">
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="VisualStateGroup">
                 <VisualState x:Name="smal1024x768">
@@ -57,9 +57,12 @@
             </StackPanel>
         </SplitView.Pane>
         <Grid x:Name="MySplitViewContent">
-            <StackPanel x:Name="tripsPanel" HorizontalAlignment="Left" Height="800" Margin="0,0,50,0" VerticalAlignment="Top" Width="400" BorderThickness="2" CornerRadius="4" Background="Azure" BorderBrush="#FF00D0FF"/>
-            <StackPanel x:Name="itemsPanel" Background="Azure" HorizontalAlignment="Center" Height="800" Margin="0,0,0,0" VerticalAlignment="Top" Width="400" BorderBrush="#FF00D0FF" BorderThickness="2" CornerRadius="4"/>
-            <StackPanel x:Name="addPanel" Background="Azure" HorizontalAlignment="Right" Height="800" Margin="0,0,0,0" VerticalAlignment="Top" Width="400" BorderBrush="#FF00D0FF" BorderThickness="2" CornerRadius="4"/>
+            <Grid.Background>
+                <ImageBrush Stretch="Fill" ImageSource="Assets/travel-industry.jpg"/>
+            </Grid.Background>
+            <StackPanel x:Name="tripsPanel" HorizontalAlignment="Left" Height="750" Margin="10,25,5,5" VerticalAlignment="Top" Width="400" BorderThickness="2" CornerRadius="4" Background="Azure" BorderBrush="#FF00D0FF"/>
+            <StackPanel x:Name="itemsPanel" Background="Azure" HorizontalAlignment="Center" Height="750" Margin="0,25,0,5" VerticalAlignment="Top" Width="400" BorderBrush="#FF00D0FF" BorderThickness="2" CornerRadius="4"/>
+            <StackPanel x:Name="addPanel" Background="Azure" HorizontalAlignment="Right" Height="750" Margin="5,25,10,5" VerticalAlignment="Top" Width="400" BorderBrush="#FF00D0FF" BorderThickness="2" CornerRadius="4"/>
         </Grid>
     </SplitView>
 
