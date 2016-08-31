@@ -18,6 +18,6 @@
             <ComboBoxItem Content="Bathroom"></ComboBoxItem>
             <ComboBoxItem Content="Applience"></ComboBoxItem>
         </ComboBox>
-        <Button x:Name="btnAdd" Content="Add" Width="350" Height="100" Background="#00D0FF" VerticalAlignment="Bottom" Margin="0,50,0,0" Click="btnAdd_Click"></Button>
+        <Button x:Name="btnAdd" Content="Add" Width="350" Height="100" Background="#FF0F73EC" VerticalAlignment="Bottom" Margin="0,50,0,0" Click="btnAdd_Click"></Button>
     </ListView>
 </UserControl>
