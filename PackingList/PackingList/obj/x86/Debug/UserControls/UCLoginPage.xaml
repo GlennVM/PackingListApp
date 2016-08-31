@@ -16,22 +16,22 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <!-- title -->
-            <TextBlock Text="Login Page" Foreground="Black" FontSize="40"/>
+            <TextBlock Text="Login Page" Foreground="Black" FontSize="40" HorizontalAlignment="Center"/>
 
             <!-- Username -->
-            <TextBlock Text="UserID" Foreground="Black" FontSize="30"/>
+            <TextBlock Text="UserName" Foreground="Black" FontSize="30" ToolTipService.ToolTip="your username"/>
             <TextBox x:ConnectionId='2'  BorderBrush="LightGray" Name="UserName" />
 
             <!--Password-->
             <TextBlock  Foreground="Black" Text="Password" FontSize="30"/>
             <PasswordBox x:ConnectionId='3' BorderBrush="LightGray" Name="PassWord"  />
 
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <!--Login Button-->
-                <Button x:ConnectionId='4' Content="Login" Background="#FF30DABB" Name="Login"                     Margin="2,2,2,2" />
+                <Button x:ConnectionId='4' Content="Login" Background="#FF0F73EC" Name="Login"                     Margin="2,2,2,2" />
 
                 <!--  Registration Button-->
-                <Button x:ConnectionId='5' Content="Registration" Background="#FF30DABB" Name="SignUp"                      Margin="2,2,2,2" />
+                <Button x:ConnectionId='5' Content="Registration" Background="#FF0F73EC" Name="SignUp"                      Margin="2,2,2,2" />
 
             </StackPanel>
 

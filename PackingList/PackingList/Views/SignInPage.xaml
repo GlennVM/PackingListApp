@@ -35,7 +35,7 @@
 
             <!--Title-->
 
-            <TextBlock Text="User Registration :" Grid.Row="0" FontSize="40"  Foreground="Black"/>
+            <TextBlock Text="User Registration :" Grid.Row="0" FontSize="40"  Foreground="Black" HorizontalAlignment="Center"/>
 
             <!--UserName-->
 
@@ -57,7 +57,7 @@
 
             <!--Submit Button-->
 
-            <Button BorderBrush="Transparent"  Background="#FF30DABB" Content="Submit"  Name="BtnSubmit" Click="Submit_Click" Grid.Row="7" Margin="8,8,8,8"/>
+            <Button BorderBrush="Transparent"  Background="#FF0F73EC" Content="Submit"  Name="BtnSubmit" Click="Submit_Click" Grid.Row="7" Margin="8,8,8,8" HorizontalAlignment="Center" FontWeight="Bold"/>
 
         </Grid>
 
