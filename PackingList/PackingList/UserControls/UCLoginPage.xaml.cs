@@ -40,10 +40,8 @@ namespace PackingList.UserControls
                 loginUser.Name = UserName.Text.ToString();
                 loginUser.Password = PassWord.Password.ToString();
 
-                vm.login(loginUser);
-                mysplit.Children.Remove(this);
-                var dialog = new MessageDialog("Welcome " + loginUser.Name);
-                await dialog.ShowAsync();
+                vm.login(loginUser, mysplit, this);
+                
 
 
                 /**foreach (var userLogin in service.retrieveUsers())

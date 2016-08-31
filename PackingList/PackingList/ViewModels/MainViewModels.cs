@@ -12,6 +12,8 @@ using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.Data.Json;
+using Windows.UI.Popups;
+using Windows.UI.Xaml.Controls;
 
 namespace PackingList.ViewModels
 {
@@ -134,7 +136,7 @@ namespace PackingList.ViewModels
             }
         }
 
-        public async void login(User user)
+        public async void login(User user, Grid mySplit, UserControl ucLogin)
         {
             using (var client = new HttpClient())
             {
@@ -150,9 +152,11 @@ namespace PackingList.ViewModels
                     var jsonAsString = await response.Content.ReadAsStringAsync();
                     User output = JsonConvert.DeserializeObject<User>(jsonAsString);
                     laadReizen(output.UserId);
-                    //selectedUser = output;
-                    //TripComponent = selectedUser.Trips;
-                    //ItemDictionary = selectedUser.ItemDictionary;
+                    mySplit.Children.Remove(ucLogin);
+                } else
+                {
+                    var dialog = new MessageDialog("Wrong Login/Password combination");
+                    await dialog.ShowAsync();
                 }
             }
         }

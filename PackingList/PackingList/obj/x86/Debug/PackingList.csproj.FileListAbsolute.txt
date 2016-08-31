@@ -2671,3 +2671,5 @@ C:\Users\Gebruiker\Source\Repos\PackingListApp2zit\PackingList\PackingList\obj\x
 C:\Users\Gebruiker\Source\Repos\PackingListApp2zit\PackingList\PackingList\obj\x86\Debug\System.Net.Http.Formatting\pri.resfiles.intermediate
 C:\Users\Gebruiker\Source\Repos\PackingListApp2zit\PackingList\PackingList\obj\x86\Debug\System.Net.Http.Formatting\priconfig.xml
 C:\Users\Gebruiker\Source\Repos\PackingListApp2zit\PackingList\PackingList\obj\x86\Debug\System.Net.Http.Formatting\priconfig.xml.intermediate
+C:\Users\Glenn\Desktop\ExamenWindows\PackingList\PackingList\bin\x86\Debug\Core\Assets\travel-industry.jpg
+C:\Users\Glenn\Desktop\ExamenWindows\PackingList\PackingList\obj\x86\Debug\Core\Assets\travel-industry.jpg
