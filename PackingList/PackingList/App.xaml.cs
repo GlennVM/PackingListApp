@@ -84,6 +84,20 @@ namespace PackingList
             // Ensure the current window is active
             Window.Current.Activate();
         }
+       /* protected override void OnActivated(IActivatedEventArgs args)
+        {
+            float DPI = Windows.Graphics.Display.DisplayInformation.GetForCurrentView().LogicalDpi;
+
+            Windows.UI.ViewManagement.ApplicationView.PreferredLaunchWindowingMode = Windows.UI.ViewManagement.ApplicationViewWindowingMode.PreferredLaunchViewSize;
+
+            var desiredSize = new Windows.Foundation.Size(((float)800 * 96.0f / DPI), ((float)600 * 96.0f / DPI));
+
+            Windows.UI.ViewManagement.ApplicationView.PreferredLaunchViewSize = desiredSize;
+
+            Window.Current.Activate();
+
+            bool result = Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().TryResizeView(desiredSize);
+        }*/
 
         private void OnBackRequested(object sender, BackRequestedEventArgs e)
         {

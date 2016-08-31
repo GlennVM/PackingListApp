@@ -35,25 +35,25 @@
 
             <!--Title-->
 
-            <TextBlock Text="User Registration :" Grid.Row="0" FontSize="40"  Foreground="Black" HorizontalAlignment="Center"/>
+            <TextBlock Text="User Registration" Grid.Row="0" FontSize="40"  Foreground="Black" HorizontalAlignment="Center" Margin="0,0,0,20"/>
 
             <!--UserName-->
 
-            <TextBlock Text="UserName :" Grid.Row="1" Foreground="Black"   Margin="0,25,0,0"/>
+            <TextBlock Text="UserName :" Grid.Row="1" Foreground="Black"   Margin="25,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
-            <TextBox x:ConnectionId='2' Name="TxtUserName" BorderBrush="LightGray" Grid.Row="1" Margin="100,0,0,0" />
+            <TextBox x:ConnectionId='2' Name="TxtUserName" BorderBrush="LightGray" Grid.Row="1" Margin="125,0,0,5" Width="256" HorizontalAlignment="Left" />
 
             <!--Password-->
 
-            <TextBlock Text="Password: " Grid.Row="2" Margin="0,25,0,0" Foreground="Black" />
+            <TextBlock Text="Password: " Grid.Row="2" Margin="25,0,0,0" Foreground="Black" VerticalAlignment="Center" />
 
-            <PasswordBox x:ConnectionId='3' Name="TxtPwd" BorderBrush="LightGray" Grid.Row="2" Margin="100,0,0,0" />
+            <PasswordBox x:ConnectionId='3' Name="TxtPwd" BorderBrush="LightGray" Grid.Row="2" Margin="125,0,0,5" Width="256" HorizontalAlignment="Left" />
 
             <!--Email-->
 
-            <TextBlock Text="Email Address: " Grid.Row="6" Margin="0,25,0,0" Foreground="Black" />
+            <TextBlock Text="Email Address: " Grid.Row="6" Margin="25,0,0,0" Foreground="Black" VerticalAlignment="Center" />
 
-            <TextBox x:ConnectionId='4' Name="TxtEmail" BorderBrush="LightGray" Grid.Row="6" Margin="100,0,0,0" />
+            <TextBox x:ConnectionId='4' Name="TxtEmail" BorderBrush="LightGray" Grid.Row="6" Margin="125,0,0,5" Width="256" HorizontalAlignment="Left" />
 
             <!--Submit Button-->
 

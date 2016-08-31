@@ -16,22 +16,22 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <!-- title -->
-            <TextBlock Text="Login Page" Foreground="Black" FontSize="40" HorizontalAlignment="Center"/>
+            <TextBlock Text="Travel List Pack " Foreground="Black" FontSize="40" HorizontalAlignment="Center"/>
 
             <!-- Username -->
-            <TextBlock Text="UserName" Foreground="Black" FontSize="30" ToolTipService.ToolTip="your username"/>
-            <TextBox  BorderBrush="LightGray" Name="UserName" />
+            <TextBlock Text="Username :" Foreground="Black" FontSize="30" ToolTipService.ToolTip="" HorizontalAlignment="Center"/>
+            <TextBox  BorderBrush="LightGray" Name="UserName" Width="256" />
 
             <!--Password-->
-            <TextBlock  Foreground="Black" Text="Password" FontSize="30"/>
-            <PasswordBox BorderBrush="LightGray" Name="PassWord"  />
+            <TextBlock  Foreground="Black" Text="Password :" FontSize="30" HorizontalAlignment="Center"/>
+            <PasswordBox BorderBrush="LightGray" Name="PassWord" Width="256" Margin="0,0,0,5"  />
 
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,8,0,0">
                 <!--Login Button-->
-                <Button Content="Login" Background="#FF0F73EC" Name="Login" Click="Login_Click" Margin="2,2,2,2" />
+                <Button Content="Login" Background="#FF0F73EC" Name="Login" Click="Login_Click" Margin="2,0,2,2" VerticalAlignment="Center" FontWeight="Bold" />
 
                 <!--  Registration Button-->
-                <Button Content="Registration" Background="#FF0F73EC" Name="SignUp" Click="SignUp_Click" Margin="2,2,2,2" />
+                <Button Content="Registration" Background="#FF0F73EC" Name="SignUp" Click="SignUp_Click" Margin="2,0,2,2" FontWeight="Bold" />
 
             </StackPanel>
 
