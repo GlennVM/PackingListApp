@@ -11,7 +11,7 @@
 
     <RelativePanel Background="Azure">
         <StackPanel x:Name="itemDictionary">
-            <Button Content="Add Item" Height="100" Width="410" Background="#00D0FF" Click="AddItem"></Button>
+            <Button Content="Add Item" Height="100" Width="410" Background="#FF0F73EC" Click="AddItem"></Button>
             <ListView Margin="10" Name="lvDataBinding" ItemsSource="{x:Bind vm.ItemDictionary}" Background="Azure" ScrollViewer.VerticalScrollMode="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Height="600" Width="400">
                 <ListView.ItemTemplate>
                     <DataTemplate>
