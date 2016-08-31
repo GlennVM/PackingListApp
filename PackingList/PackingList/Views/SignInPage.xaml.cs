@@ -1,5 +1,6 @@
 ﻿using PackingList.Models;
 using PackingList.UserControls;
+using PackingList.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -26,6 +27,7 @@ namespace PackingList.Views
     /// </summary>
     public sealed partial class SignInPage : Page
     {
+        MainViewModel mv;
 
         public SignInPage()
         {
@@ -34,6 +36,8 @@ namespace PackingList.Views
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            MainViewModel mv = (MainViewModel)e.Parameter;
+            this.mv = mv;
             base.OnNavigatedTo(e);
         }
 
@@ -63,8 +67,10 @@ namespace PackingList.Views
                 newUser.Name = TxtUserName.Text;
                 newUser.Password = TxtPwd.Password;
                 newUser.EmailAddress = TxtEmail.Text;
-
-                Frame.Navigate(typeof(UCLoginPage), newUser);
+                newUser.ItemDictionary = new List<Item>();
+                newUser.Trips = new List<Trip>();
+                mv.register(newUser);
+                //Frame.Navigate(typeof(UCLoginPage), newUser);
                 
             }
             else

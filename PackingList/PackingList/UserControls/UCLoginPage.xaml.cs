@@ -65,7 +65,7 @@ namespace PackingList.UserControls
         private void SignUp_Click(object sender, RoutedEventArgs e)
         {
             var rootFrame = Window.Current.Content as Frame;
-            rootFrame.Navigate(typeof(SignInPage));
+            rootFrame.Navigate(typeof(SignInPage), vm);
         }
     }
 }

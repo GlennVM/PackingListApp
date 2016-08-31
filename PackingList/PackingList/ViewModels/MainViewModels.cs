@@ -45,6 +45,30 @@ namespace PackingList.ViewModels
             }
         }
 
+        public async void laadReizen(int id)
+        {
+            //TripComponent = dm.retrieveTrips();
+
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://localhost:3398/");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                string suburl = "api/user/" + id;
+                // New code:
+                HttpResponseMessage response = await client.GetAsync(suburl);
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsonAsString = await response.Content.ReadAsStringAsync();
+                    User output = JsonConvert.DeserializeObject<User>(jsonAsString);
+                    selectedUser = output;
+                    TripComponent = selectedUser.Trips;
+                    ItemDictionary = selectedUser.ItemDictionary;
+                }
+            }
+        }
+
 
         //public async void laadItemDictionary()
         //{
@@ -87,6 +111,27 @@ namespace PackingList.ViewModels
                     //ItemDictionary = selectedUser.ItemDictionary;
                 }
             }
+        }
+
+        public async void register(User user)
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://localhost:3398/");
+                var itemAsJson = JsonConvert.SerializeObject(user);
+                var content = new StringContent(itemAsJson);
+                content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+                string subUrl = "api/user";
+                // New code:
+                HttpResponseMessage response = await client.PostAsync(subUrl, content);
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsonAsString = await response.Content.ReadAsStringAsync();
+                    User output = JsonConvert.DeserializeObject<User>(jsonAsString);
+                    laadReizen(output.UserId);
+                }
+            }
+
         }
     }
 }

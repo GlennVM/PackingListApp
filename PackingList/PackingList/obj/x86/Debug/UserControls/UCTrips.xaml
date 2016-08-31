@@ -1,0 +1,29 @@
+﻿<UserControl x:ConnectionId='1'
+    x:Class="PackingList.UserControls.UCTrips"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PackingList.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    <StackPanel>
+        <Button x:ConnectionId='2' x:Name="btnAddTrip" Content="Add Trip" Width="400" Height="100" Background="#00D0FF"                         ></Button>
+        <ListView x:ConnectionId='3' xmlns:m="using:PackingList.Models"                                                                                      >
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapGrid Orientation="Horizontal" ItemHeight="100" ItemWidth="400" />
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate                    >
+                    <StackPanel x:ConnectionId='4' Orientation="Horizontal" Margin="10">
+                        <TextBlock x:ConnectionId='5'                      />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackPanel>
+</UserControl>
+
